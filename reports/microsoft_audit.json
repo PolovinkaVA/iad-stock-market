@@ -1,0 +1,398 @@
+{
+  "checked_at_utc": "2026-10-14T18:46:19.940323+00:00",
+  "period": {
+    "start": "2018-01-01",
+    "end": "2026-10-13"
+  },
+  "archive_pages": [
+    {
+      "page": 1,
+      "count": 12,
+      "first": "2026-06-23",
+      "last": "2026-10-07"
+    },
+    {
+      "page": 2,
+      "count": 12,
+      "first": "2026-04-16",
+      "last": "2026-06-10"
+    },
+    {
+      "page": 3,
+      "count": 12,
+      "first": "2026-01-07",
+      "last": "2026-04-14"
+    },
+    {
+      "page": 4,
+      "count": 12,
+      "first": "2025-08-20",
+      "last": "2025-12-02"
+    },
+    {
+      "page": 5,
+      "count": 12,
+      "first": "2025-03-17",
+      "last": "2025-07-30"
+    },
+    {
+      "page": 6,
+      "count": 12,
+      "first": "2024-11-14",
+      "last": "2025-03-11"
+    },
+    {
+      "page": 7,
+      "count": 12,
+      "first": "2024-09-16",
+      "last": "2024-10-30"
+    },
+    {
+      "page": 8,
+      "count": 12,
+      "first": "2024-05-08",
+      "last": "2024-08-08"
+    },
+    {
+      "page": 9,
+      "count": 12,
+      "first": "2024-03-18",
+      "last": "2024-05-08"
+    },
+    {
+      "page": 10,
+      "count": 12,
+      "first": "2023-11-29",
+      "last": "2024-03-14"
+    },
+    {
+      "page": 11,
+      "count": 12,
+      "first": "2023-09-14",
+      "last": "2023-10-31"
+    },
+    {
+      "page": 12,
+      "count": 12,
+      "first": "2023-04-25",
+      "last": "2023-08-30"
+    },
+    {
+      "page": 13,
+      "count": 12,
+      "first": "2023-01-24",
+      "last": "2023-04-25"
+    },
+    {
+      "page": 14,
+      "count": 12,
+      "first": "2022-10-12",
+      "last": "2023-01-24"
+    },
+    {
+      "page": 15,
+      "count": 12,
+      "first": "2022-07-12",
+      "last": "2022-10-12"
+    },
+    {
+      "page": 16,
+      "count": 12,
+      "first": "2022-04-25",
+      "last": "2022-06-16"
+    },
+    {
+      "page": 17,
+      "count": 12,
+      "first": "2022-01-25",
+      "last": "2022-04-21"
+    },
+    {
+      "page": 18,
+      "count": 12,
+      "first": "2021-11-12",
+      "last": "2022-01-25"
+    },
+    {
+      "page": 19,
+      "count": 12,
+      "first": "2021-08-12",
+      "last": "2021-11-10"
+    },
+    {
+      "page": 20,
+      "count": 12,
+      "first": "2021-06-02",
+      "last": "2021-08-11"
+    },
+    {
+      "page": 21,
+      "count": 12,
+      "first": "2021-03-29",
+      "last": "2021-06-02"
+    },
+    {
+      "page": 22,
+      "count": 12,
+      "first": "2021-02-03",
+      "last": "2021-03-22"
+    },
+    {
+      "page": 23,
+      "count": 12,
+      "first": "2020-12-02",
+      "last": "2021-01-26"
+    },
+    {
+      "page": 24,
+      "count": 12,
+      "first": "2020-10-19",
+      "last": "2020-12-02"
+    },
+    {
+      "page": 25,
+      "count": 12,
+      "first": "2020-08-24",
+      "last": "2020-10-13"
+    },
+    {
+      "page": 26,
+      "count": 12,
+      "first": "2020-07-14",
+      "last": "2020-08-21"
+    },
+    {
+      "page": 27,
+      "count": 12,
+      "first": "2020-06-18",
+      "last": "2020-07-14"
+    },
+    {
+      "page": 28,
+      "count": 12,
+      "first": "2020-05-05",
+      "last": "2020-06-17"
+    },
+    {
+      "page": 29,
+      "count": 12,
+      "first": "2020-03-17",
+      "last": "2020-04-30"
+    },
+    {
+      "page": 30,
+      "count": 12,
+      "first": "2020-01-15",
+      "last": "2020-03-13"
+    },
+    {
+      "page": 31,
+      "count": 12,
+      "first": "2019-11-14",
+      "last": "2019-12-20"
+    },
+    {
+      "page": 32,
+      "count": 12,
+      "first": "2019-09-26",
+      "last": "2019-11-05"
+    },
+    {
+      "page": 33,
+      "count": 12,
+      "first": "2019-07-18",
+      "last": "2019-09-24"
+    },
+    {
+      "page": 34,
+      "count": 12,
+      "first": "2019-05-23",
+      "last": "2019-07-17"
+    },
+    {
+      "page": 35,
+      "count": 12,
+      "first": "2019-04-24",
+      "last": "2019-05-22"
+    },
+    {
+      "page": 36,
+      "count": 12,
+      "first": "2019-03-20",
+      "last": "2019-04-24"
+    },
+    {
+      "page": 37,
+      "count": 12,
+      "first": "2019-01-30",
+      "last": "2019-03-12"
+    },
+    {
+      "page": 38,
+      "count": 12,
+      "first": "2018-11-13",
+      "last": "2019-01-17"
+    },
+    {
+      "page": 39,
+      "count": 12,
+      "first": "2018-09-24",
+      "last": "2018-11-09"
+    },
+    {
+      "page": 40,
+      "count": 12,
+      "first": "2018-07-24",
+      "last": "2018-09-20"
+    },
+    {
+      "page": 41,
+      "count": 12,
+      "first": "2018-06-14",
+      "last": "2018-07-19"
+    },
+    {
+      "page": 42,
+      "count": 12,
+      "first": "2018-05-07",
+      "last": "2018-06-13"
+    },
+    {
+      "page": 43,
+      "count": 12,
+      "first": "2018-03-19",
+      "last": "2018-05-01"
+    },
+    {
+      "page": 44,
+      "count": 12,
+      "first": "2017-11-29",
+      "last": "2018-03-13"
+    },
+    {
+      "page": 45,
+      "count": 12,
+      "first": "2017-10-24",
+      "last": "2017-11-29"
+    }
+  ],
+  "limitations": [
+    "Archive tag coverage is not all Microsoft news or all market news.",
+    "Current pages are not point-in-time text snapshots. Modified dates do not prove historical content availability.",
+    "No model trained; forecasting benefit of texts is not established.",
+    "A second read checks discovery/deduplication only, not a production ingestion pipeline."
+  ],
+  "archive_boundary_reached": true,
+  "articles_discovered": 526,
+  "article_checks": {
+    "downloaded": 526,
+    "errors": [],
+    "missing_publication_timestamp": 0,
+    "missing_modified_timestamp": 7,
+    "modified_more_than_one_day_later": 471,
+    "publication_date_differs_from_url_utc": 2,
+    "short_texts_under_80_words": 0,
+    "earnings_link_notices": 30,
+    "duplicate_text_hashes": 0,
+    "modified_date_counts": {
+      "2025-05-07": 465,
+      "": 7,
+      "2025-07-30": 2,
+      "2025-12-01": 2,
+      "2026-04-08": 2,
+      "2026-06-08": 2,
+      "2026-04-21": 2,
+      "2026-04-29": 2,
+      "2026-06-09": 2,
+      "2026-07-29": 2
+    },
+    "minimum_text_words": 107
+  },
+  "by_year": {
+    "2018": {
+      "discovered": 78,
+      "downloaded": 78,
+      "late_modified": 78
+    },
+    "2019": {
+      "discovered": 88,
+      "downloaded": 88,
+      "late_modified": 88
+    },
+    "2020": {
+      "discovered": 90,
+      "downloaded": 90,
+      "late_modified": 90
+    },
+    "2021": {
+      "discovered": 60,
+      "downloaded": 60,
+      "late_modified": 60
+    },
+    "2022": {
+      "discovered": 52,
+      "downloaded": 52,
+      "late_modified": 52
+    },
+    "2023": {
+      "discovered": 41,
+      "downloaded": 41,
+      "late_modified": 41
+    },
+    "2024": {
+      "discovered": 48,
+      "downloaded": 48,
+      "late_modified": 48
+    },
+    "2025": {
+      "discovered": 33,
+      "downloaded": 33,
+      "late_modified": 12
+    },
+    "2026": {
+      "discovered": 36,
+      "downloaded": 36,
+      "late_modified": 2
+    }
+  },
+  "prices": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1514764800&period2=1791936000&interval=1d",
+    "rows": 2207,
+    "first_date": "2018-01-02",
+    "last_date": "2026-10-13",
+    "duplicate_dates": 0,
+    "sorted_dates": true,
+    "missing_or_nonfinite": {
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "volume": 0
+    },
+    "invalid_ohlcv": 0,
+    "raw_sha256": "01c4f0059722accaac8c7b08dff1de2132c704db0ec92d0f78ebd92a0364fe26",
+    "note": "Checks validate returned rows, not exchange-calendar completeness or corporate-action adjustments."
+  },
+  "calendar_date_overlap": {
+    "trading_days_with_publication": 422,
+    "total_trading_days": 2207,
+    "percent": 19.12,
+    "note": "URL date intersection only; not a leak-safe assignment to forecast cutoffs."
+  },
+  "repeat_discovery": {
+    "first_page_links": 12,
+    "new_urls_vs_collected": 0,
+    "mode": "fresh network request"
+  },
+  "requests": {
+    "network": 511,
+    "cache_hits": 62
+  },
+  "manifest_sha256": "9ce1f372cad87762f1ea6f85806200a4b41310b11f26904f4e610b7e8efb9b06",
+  "verification": {
+    "offline_replay_matches": true,
+    "offline_network_requests": 0,
+    "identical_manifest_sha256": "9ce1f372cad87762f1ea6f85806200a4b41310b11f26904f4e610b7e8efb9b06",
+    "parser_unit_tests_passed": 4
+  }
+}

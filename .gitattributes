@@ -1,0 +1,2 @@
+# Preserve the audited CSV byte-for-byte so its recorded SHA-256 survives checkout.
+reports/microsoft_articles.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
