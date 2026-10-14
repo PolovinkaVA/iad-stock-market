@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+.venv/
+.deps/
+venv/
+.env
+.DS_Store
+
+# Local and downloaded data
+data/*.sqlite
+data/*.db
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Locally trained artifacts
+models/*
+!models/.gitkeep
+
+# Generated reports and exports
+reports/generated/*
+
+# Local previews, downloads and draft office documents
+tmp/
+.chart-data-*/
+.codex-docx-review/
+.codex-pptx-build/
+reports/*.docx
+reports/*.pptx
+/*.pdf
+.env.*
+!.env.example

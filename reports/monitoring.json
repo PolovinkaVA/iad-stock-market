@@ -1,0 +1,70 @@
+{
+  "experiment_id": "58a92cc3-5e09-4aa0-9a20-9523e6f73e09",
+  "monitoring_window": {
+    "start": "2025-10-16",
+    "end": "2026-10-09",
+    "rows": 252
+  },
+  "reference_validation_mae_rub": 3.2852905157439625,
+  "holdout_test_mae_rub": 2.426169703450021,
+  "recent_window_sessions": 20,
+  "recent_window_mae_rub": 2.581295646602399,
+  "recent_to_validation_mae_ratio": 0.785713054669644,
+  "warning_threshold_ratio": 1.5,
+  "status": "within_reference_threshold",
+  "monthly_mae": {
+    "2025-10": {
+      "rows": 12,
+      "mae_rub": 5.443554947756719
+    },
+    "2025-11": {
+      "rows": 19,
+      "mae_rub": 2.7566603855893788
+    },
+    "2025-12": {
+      "rows": 22,
+      "mae_rub": 1.664043937157363
+    },
+    "2026-01": {
+      "rows": 19,
+      "mae_rub": 1.6056878043919542
+    },
+    "2026-02": {
+      "rows": 20,
+      "mae_rub": 1.3273253137219796
+    },
+    "2026-03": {
+      "rows": 22,
+      "mae_rub": 1.2047041496928856
+    },
+    "2026-04": {
+      "rows": 22,
+      "mae_rub": 1.6832240885913243
+    },
+    "2026-05": {
+      "rows": 21,
+      "mae_rub": 1.3685812463261138
+    },
+    "2026-06": {
+      "rows": 22,
+      "mae_rub": 3.270159403884897
+    },
+    "2026-07": {
+      "rows": 23,
+      "mae_rub": 3.8331265378596164
+    },
+    "2026-08": {
+      "rows": 21,
+      "mae_rub": 3.3897333556261007
+    },
+    "2026-09": {
+      "rows": 22,
+      "mae_rub": 2.6791903553375933
+    },
+    "2026-10": {
+      "rows": 7,
+      "mae_rub": 2.5036263482661036
+    }
+  },
+  "interpretation": "Historical holdout monitoring only; alert threshold is a review trigger, not proof of model drift."
+}

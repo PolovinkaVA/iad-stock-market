@@ -1,0 +1,285 @@
+{
+  "experiment_id": "58a92cc3-5e09-4aa0-9a20-9523e6f73e09",
+  "created_at_utc": "2026-10-10T18:06:50+00:00",
+  "ticker": "SBER",
+  "target": "next trading session close (RUB)",
+  "feature_source_status": "price/volume/calendar only; news omitted because historical coverage is below threshold",
+  "news_coverage": {
+    "sessions_with_news": 11,
+    "feature_rows": 2180,
+    "coverage_percent": 0.5046,
+    "minimum_to_include_percent": 20.0,
+    "included_in_model": false
+  },
+  "data_rows": 2180,
+  "feature_count": 5,
+  "train_period": {
+    "start": "2018-01-31",
+    "end": "2024-10-14",
+    "rows": 1675
+  },
+  "validation_period": {
+    "start": "2024-10-16",
+    "end": "2025-10-14",
+    "rows": 252
+  },
+  "test_period": {
+    "start": "2025-10-15",
+    "end": "2026-10-08",
+    "rows": 252
+  },
+  "validation_metrics": {
+    "naive_last_close": {
+      "mae_rub": 3.308412698412698,
+      "rmse_rub": 4.698164957539696,
+      "mape_percent": 1.1620006763744817,
+      "r2": 0.9713440436065955
+    },
+    "linear_regression": {
+      "mae_rub": 3.2852905157439625,
+      "rmse_rub": 4.679427244482482,
+      "mape_percent": 1.1545088853246765,
+      "r2": 0.9715721651556869
+    },
+    "random_forest": {
+      "mae_rub": 3.3917480276664413,
+      "rmse_rub": 4.818952665094582,
+      "mape_percent": 1.1931866334748438,
+      "r2": 0.9698516390692133
+    },
+    "gradient_boosting": {
+      "mae_rub": 3.387998840117311,
+      "rmse_rub": 4.778388853952704,
+      "mape_percent": 1.1912123801078618,
+      "r2": 0.9703570540220836
+    }
+  },
+  "selected_model": "linear_regression",
+  "validation_feature_selection": {
+    "naive_last_close": {
+      "selected_set": "close_at_forecast only",
+      "validation_metrics_by_set": {}
+    },
+    "linear_regression": {
+      "selected_set": "price_levels_only",
+      "selected_features": [
+        "close_at_forecast",
+        "close_lag_1d",
+        "close_lag_5d",
+        "close_mean_5d",
+        "close_mean_20d"
+      ],
+      "validation_metrics_by_set": {
+        "all_features": {
+          "mae_rub": 5.81907607512143,
+          "rmse_rub": 7.930573154031874,
+          "mape_percent": 2.046293607487627,
+          "r2": 0.9183478666394911
+        },
+        "without_calendar": {
+          "mae_rub": 5.819113434622348,
+          "rmse_rub": 7.930610442869266,
+          "mape_percent": 2.0463060715526193,
+          "r2": 0.9183470987958
+        },
+        "without_returns_and_volatility": {
+          "mae_rub": 5.819076017176664,
+          "rmse_rub": 7.930573064261949,
+          "mape_percent": 2.0462935869978027,
+          "r2": 0.9183478684880098
+        },
+        "without_volume": {
+          "mae_rub": 3.3301842826939394,
+          "rmse_rub": 4.768191181419721,
+          "mape_percent": 1.1700022050144478,
+          "r2": 0.9704834424363034
+        },
+        "price_levels_only": {
+          "mae_rub": 3.2852905157439625,
+          "rmse_rub": 4.679427244482482,
+          "mape_percent": 1.1545088853246765,
+          "r2": 0.9715721651556869
+        }
+      }
+    },
+    "random_forest": {
+      "selected_set": "price_levels_only",
+      "selected_features": [
+        "close_at_forecast",
+        "close_lag_1d",
+        "close_lag_5d",
+        "close_mean_5d",
+        "close_mean_20d"
+      ],
+      "validation_metrics_by_set": {
+        "all_features": {
+          "mae_rub": 3.4585404918844618,
+          "rmse_rub": 4.890685305302455,
+          "mape_percent": 1.2159217473738542,
+          "r2": 0.9689474104713038
+        },
+        "without_calendar": {
+          "mae_rub": 3.434891605306155,
+          "rmse_rub": 4.892346217573344,
+          "mape_percent": 1.2086561520332388,
+          "r2": 0.9689263155197787
+        },
+        "without_returns_and_volatility": {
+          "mae_rub": 3.441931526049018,
+          "rmse_rub": 4.885387361744433,
+          "mape_percent": 1.2082456315517367,
+          "r2": 0.9690146508473232
+        },
+        "without_volume": {
+          "mae_rub": 3.4480534878884663,
+          "rmse_rub": 4.901544123114134,
+          "mape_percent": 1.2142767223009727,
+          "r2": 0.9688093648893109
+        },
+        "price_levels_only": {
+          "mae_rub": 3.3917480276664413,
+          "rmse_rub": 4.818952665094582,
+          "mape_percent": 1.1931866334748438,
+          "r2": 0.9698516390692133
+        }
+      }
+    },
+    "gradient_boosting": {
+      "selected_set": "price_levels_only",
+      "selected_features": [
+        "close_at_forecast",
+        "close_lag_1d",
+        "close_lag_5d",
+        "close_mean_5d",
+        "close_mean_20d"
+      ],
+      "validation_metrics_by_set": {
+        "all_features": {
+          "mae_rub": 3.417250020439555,
+          "rmse_rub": 4.780827258849004,
+          "mape_percent": 1.1997941357757658,
+          "r2": 0.9703267927983128
+        },
+        "without_calendar": {
+          "mae_rub": 3.412230920671482,
+          "rmse_rub": 4.7815903681444665,
+          "mape_percent": 1.198040700566328,
+          "r2": 0.9703173192464732
+        },
+        "without_returns_and_volatility": {
+          "mae_rub": 3.418924463641715,
+          "rmse_rub": 4.7947318854634515,
+          "mape_percent": 1.2019907857316112,
+          "r2": 0.9701539378329954
+        },
+        "without_volume": {
+          "mae_rub": 3.420278720529372,
+          "rmse_rub": 4.784806789015137,
+          "mape_percent": 1.2009983168152403,
+          "r2": 0.9702773726609324
+        },
+        "price_levels_only": {
+          "mae_rub": 3.387998840117311,
+          "rmse_rub": 4.778388853952704,
+          "mape_percent": 1.1912123801078618,
+          "r2": 0.9703570540220836
+        }
+      }
+    }
+  },
+  "untouched_test_metrics": {
+    "mae_rub": 2.426169703450021,
+    "rmse_rub": 3.4449126931972596,
+    "mape_percent": 0.821849125254645,
+    "r2": 0.9588288466328069
+  },
+  "model_parameters": {
+    "features": [
+      "close_at_forecast",
+      "close_lag_1d",
+      "close_lag_5d",
+      "close_mean_5d",
+      "close_mean_20d"
+    ]
+  },
+  "deployment_model_file": "sber_58a92cc3.joblib",
+  "selection_rule": "Lowest validation MAE; test window was not used for selection.",
+  "leakage_control": "Training rows whose next-session label falls on or after the validation/test cutoff are purged at split boundaries.",
+  "reproducibility": {
+    "random_seed": 42
+  },
+  "interpretability": {
+    "selected_model_explanation": "See model parameters and feature columns for the selected fitted model.",
+    "selected_model_used_feature": null
+  },
+  "monitoring": {
+    "experiment_id": "58a92cc3-5e09-4aa0-9a20-9523e6f73e09",
+    "monitoring_window": {
+      "start": "2025-10-16",
+      "end": "2026-10-09",
+      "rows": 252
+    },
+    "reference_validation_mae_rub": 3.2852905157439625,
+    "holdout_test_mae_rub": 2.426169703450021,
+    "recent_window_sessions": 20,
+    "recent_window_mae_rub": 2.581295646602399,
+    "recent_to_validation_mae_ratio": 0.785713054669644,
+    "warning_threshold_ratio": 1.5,
+    "status": "within_reference_threshold",
+    "monthly_mae": {
+      "2025-10": {
+        "rows": 12,
+        "mae_rub": 5.443554947756719
+      },
+      "2025-11": {
+        "rows": 19,
+        "mae_rub": 2.7566603855893788
+      },
+      "2025-12": {
+        "rows": 22,
+        "mae_rub": 1.664043937157363
+      },
+      "2026-01": {
+        "rows": 19,
+        "mae_rub": 1.6056878043919542
+      },
+      "2026-02": {
+        "rows": 20,
+        "mae_rub": 1.3273253137219796
+      },
+      "2026-03": {
+        "rows": 22,
+        "mae_rub": 1.2047041496928856
+      },
+      "2026-04": {
+        "rows": 22,
+        "mae_rub": 1.6832240885913243
+      },
+      "2026-05": {
+        "rows": 21,
+        "mae_rub": 1.3685812463261138
+      },
+      "2026-06": {
+        "rows": 22,
+        "mae_rub": 3.270159403884897
+      },
+      "2026-07": {
+        "rows": 23,
+        "mae_rub": 3.8331265378596164
+      },
+      "2026-08": {
+        "rows": 21,
+        "mae_rub": 3.3897333556261007
+      },
+      "2026-09": {
+        "rows": 22,
+        "mae_rub": 2.6791903553375933
+      },
+      "2026-10": {
+        "rows": 7,
+        "mae_rub": 2.5036263482661036
+      }
+    },
+    "interpretation": "Historical holdout monitoring only; alert threshold is a review trigger, not proof of model drift."
+  }
+}

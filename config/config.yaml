@@ -1,0 +1,45 @@
+project:
+  name: sber-next-day-forecast
+  timezone: Europe/Moscow
+  random_seed: 42
+
+instrument:
+  ticker: SBER
+  engine: stock
+  market: shares
+  board: TQBR
+  currency: RUB
+  target: close
+  horizon_trading_days: 1
+  session_close_local: "23:59:59"
+
+sources:
+  moex_iss:
+    base_url: https://iss.moex.com/iss
+    candles_interval: 24
+    start_date: "2018-01-01"
+    page_size: 500
+    timeout_seconds: 30
+    retries: 3
+  cbr_rss:
+    url: https://www.cbr.ru/rss/RssPress
+    max_records: 500
+    timeout_seconds: 30
+    retries: 3
+
+storage:
+  database: data/project.sqlite
+  raw_dir: data/raw
+  processed_dir: data/processed
+  model_dir: models
+  reports_dir: reports
+
+modeling:
+  validation_days: 252
+  test_days: 252
+  minimum_news_coverage_pct: 20.0
+  forest_estimators: 400
+  forest_min_samples_leaf: 3
+  boosting_iterations: 300
+  boosting_max_leaf_nodes: 15
+  baseline: last_close
