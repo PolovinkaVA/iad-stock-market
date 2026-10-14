@@ -20,6 +20,7 @@ models/*
 
 # Generated reports and exports
 reports/generated/*
+reports/test_predictions.csv
 
 # Local previews, downloads and draft office documents
 tmp/
