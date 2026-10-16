@@ -7,3 +7,4 @@ joblib>=1.4,<2
 streamlit>=1.39,<2
 plotly>=5.24,<7
 tzdata>=2024.1
+pandas-market-calendars>=5,<6

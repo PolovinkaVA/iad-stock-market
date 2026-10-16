@@ -1,0 +1,237 @@
+{
+  "expected_sessions": 2209,
+  "price_rows": 2209,
+  "missing_sessions": [],
+  "extra_sessions": [],
+  "large_moves_over_15pct_log": [
+    {
+      "date": "2020-03-16",
+      "log_return": -0.15945341283925973
+    }
+  ],
+  "outlier_policy": "Keep valid large market moves; no clipping or forward/back filling.",
+  "corporate_actions": {
+    "dividends": [
+      {
+        "date": "2018-02-14",
+        "amount_usd": 0.42
+      },
+      {
+        "date": "2018-05-16",
+        "amount_usd": 0.42
+      },
+      {
+        "date": "2018-08-15",
+        "amount_usd": 0.42
+      },
+      {
+        "date": "2018-11-14",
+        "amount_usd": 0.46
+      },
+      {
+        "date": "2019-02-20",
+        "amount_usd": 0.46
+      },
+      {
+        "date": "2019-05-15",
+        "amount_usd": 0.46
+      },
+      {
+        "date": "2019-08-14",
+        "amount_usd": 0.46
+      },
+      {
+        "date": "2019-11-20",
+        "amount_usd": 0.51
+      },
+      {
+        "date": "2020-02-19",
+        "amount_usd": 0.51
+      },
+      {
+        "date": "2020-05-20",
+        "amount_usd": 0.51
+      },
+      {
+        "date": "2020-08-19",
+        "amount_usd": 0.51
+      },
+      {
+        "date": "2020-11-18",
+        "amount_usd": 0.56
+      },
+      {
+        "date": "2021-02-17",
+        "amount_usd": 0.56
+      },
+      {
+        "date": "2021-05-19",
+        "amount_usd": 0.56
+      },
+      {
+        "date": "2021-08-18",
+        "amount_usd": 0.56
+      },
+      {
+        "date": "2021-11-17",
+        "amount_usd": 0.62
+      },
+      {
+        "date": "2022-02-16",
+        "amount_usd": 0.62
+      },
+      {
+        "date": "2022-05-18",
+        "amount_usd": 0.62
+      },
+      {
+        "date": "2022-08-17",
+        "amount_usd": 0.62
+      },
+      {
+        "date": "2022-11-16",
+        "amount_usd": 0.68
+      },
+      {
+        "date": "2023-02-15",
+        "amount_usd": 0.68
+      },
+      {
+        "date": "2023-05-17",
+        "amount_usd": 0.68
+      },
+      {
+        "date": "2023-08-16",
+        "amount_usd": 0.68
+      },
+      {
+        "date": "2023-11-15",
+        "amount_usd": 0.75
+      },
+      {
+        "date": "2024-02-14",
+        "amount_usd": 0.75
+      },
+      {
+        "date": "2024-05-15",
+        "amount_usd": 0.75
+      },
+      {
+        "date": "2024-08-15",
+        "amount_usd": 0.75
+      },
+      {
+        "date": "2024-11-21",
+        "amount_usd": 0.83
+      },
+      {
+        "date": "2025-02-20",
+        "amount_usd": 0.83
+      },
+      {
+        "date": "2025-05-15",
+        "amount_usd": 0.83
+      },
+      {
+        "date": "2025-08-21",
+        "amount_usd": 0.83
+      },
+      {
+        "date": "2025-11-20",
+        "amount_usd": 0.91
+      },
+      {
+        "date": "2026-02-19",
+        "amount_usd": 0.91
+      },
+      {
+        "date": "2026-05-21",
+        "amount_usd": 0.91
+      },
+      {
+        "date": "2026-08-20",
+        "amount_usd": 0.91
+      }
+    ],
+    "splits": [],
+    "adjusted_to_close_min": 0.9139268186964615,
+    "adjusted_to_close_max": 1.0,
+    "policy": "Use ordinary OHLC/close, not dividend-adjusted close. Dividends stay in actual price changes; no future dividend/event predictors. No splits in the downloaded period.",
+    "verification_scope": "Yahoo events and calendar consistency; not an independent reconciliation of every dividend amount."
+  },
+  "snapshot_sha256": "686028db65227ac1bec9422844df566855a25d622528f67d328ae9fe90953915",
+  "features_sha256": "5c0d276f0464775b4d237c0fcfc31d314a846d192e244e58c8eefd5e3084c994",
+  "config_sha256": "3be2e1055c0ab4c77d058b22dccb48d85d0596a0373681fe2a2fa876f93e011f",
+  "config": {
+    "ticker": "MSFT",
+    "database": "data/msft.sqlite",
+    "start": "2018-01-01",
+    "end": "2026-10-15",
+    "calendar": "NASDAQ",
+    "minutes_before_open": 30,
+    "text_window_days": 7,
+    "validation_sessions": 252,
+    "test_sessions": 252,
+    "seed": 42,
+    "ridge_alphas": [
+      1.0,
+      100.0,
+      1000.0
+    ],
+    "forest": {
+      "n_estimators": 200,
+      "min_samples_leaf": 15,
+      "max_depth": 8,
+      "max_features": 1.0
+    },
+    "tfidf": {
+      "max_features": 300,
+      "min_df": 3,
+      "max_df": 0.95
+    },
+    "processed_dir": "data/processed/msft",
+    "model_dir": "models/msft",
+    "reports_dir": "reports"
+  },
+  "calendar_version": "5.5.0",
+  "splits": {
+    "train": {
+      "rows": 1684,
+      "first_target": "2018-02-01",
+      "last_target": "2024-10-10"
+    },
+    "validation": {
+      "rows": 252,
+      "first_target": "2024-10-11",
+      "last_target": "2025-10-14"
+    },
+    "test": {
+      "rows": 252,
+      "first_target": "2025-10-15",
+      "last_target": "2026-10-15"
+    }
+  },
+  "feature_rows": 2188,
+  "warmup_sessions": 20,
+  "latest_unlabeled_target": "2026-10-16",
+  "text_rows_by_split": {
+    "train": {
+      "with_text": 1090,
+      "total": 1684
+    },
+    "validation": {
+      "with_text": 122,
+      "total": 252
+    },
+    "test": {
+      "with_text": 138,
+      "total": 252
+    }
+  },
+  "forecast_rule": "30 minutes before the next NASDAQ regular session opens (09:00 New York for this period). Previous session OHLCV only.",
+  "limitations": [
+    "Current text editions assigned to original published_at; historical revision leakage cannot be excluded.",
+    "Current downloaded price revisions are used; actual historical Yahoo availability at 09:00 is assumed, not measured.",
+    "Downloaded Microsoft press-release archive does not represent all market news."
+  ]
+}

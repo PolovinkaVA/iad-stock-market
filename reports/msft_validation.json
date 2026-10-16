@@ -1,0 +1,336 @@
+{
+  "dataset": {
+    "snapshot_sha256": "686028db65227ac1bec9422844df566855a25d622528f67d328ae9fe90953915",
+    "features_sha256": "5c0d276f0464775b4d237c0fcfc31d314a846d192e244e58c8eefd5e3084c994",
+    "config_sha256": "3be2e1055c0ab4c77d058b22dccb48d85d0596a0373681fe2a2fa876f93e011f",
+    "config": {
+      "ticker": "MSFT",
+      "database": "data/msft.sqlite",
+      "start": "2018-01-01",
+      "end": "2026-10-15",
+      "calendar": "NASDAQ",
+      "minutes_before_open": 30,
+      "text_window_days": 7,
+      "validation_sessions": 252,
+      "test_sessions": 252,
+      "seed": 42,
+      "ridge_alphas": [
+        1.0,
+        100.0,
+        1000.0
+      ],
+      "forest": {
+        "n_estimators": 200,
+        "min_samples_leaf": 15,
+        "max_depth": 8,
+        "max_features": 1.0
+      },
+      "tfidf": {
+        "max_features": 300,
+        "min_df": 3,
+        "max_df": 0.95
+      },
+      "processed_dir": "data/processed/msft",
+      "model_dir": "models/msft",
+      "reports_dir": "reports"
+    },
+    "calendar_version": "5.5.0",
+    "splits": {
+      "train": {
+        "rows": 1684,
+        "first_target": "2018-02-01",
+        "last_target": "2024-10-10"
+      },
+      "validation": {
+        "rows": 252,
+        "first_target": "2024-10-11",
+        "last_target": "2025-10-14"
+      },
+      "test": {
+        "rows": 252,
+        "first_target": "2025-10-15",
+        "last_target": "2026-10-15"
+      }
+    }
+  },
+  "config": {
+    "ticker": "MSFT",
+    "database": "data/msft.sqlite",
+    "start": "2018-01-01",
+    "end": "2026-10-15",
+    "calendar": "NASDAQ",
+    "minutes_before_open": 30,
+    "text_window_days": 7,
+    "validation_sessions": 252,
+    "test_sessions": 252,
+    "seed": 42,
+    "ridge_alphas": [
+      1.0,
+      100.0,
+      1000.0
+    ],
+    "forest": {
+      "n_estimators": 200,
+      "min_samples_leaf": 15,
+      "max_depth": 8,
+      "max_features": 1.0
+    },
+    "tfidf": {
+      "max_features": 300,
+      "min_df": 3,
+      "max_df": 0.95
+    },
+    "processed_dir": "data/processed/msft",
+    "model_dir": "models/msft",
+    "reports_dir": "reports"
+  },
+  "candidates": [
+    {
+      "name": "naive_last_close",
+      "family": "naive",
+      "group": "last_close",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.377818153018043,
+        "rmse_usd": 6.518927136489808,
+        "mape_percent": 1.001957987439565
+      },
+      "improvement_vs_naive_percent": 0.0
+    },
+    {
+      "name": "ridge__price_only",
+      "family": "ridge",
+      "group": "price_only",
+      "alpha": 1.0,
+      "metrics": {
+        "mae_usd": 4.389157661386503,
+        "rmse_usd": 6.5714505624863415,
+        "mape_percent": 1.008642759989541
+      },
+      "improvement_vs_naive_percent": -0.259021913933144
+    },
+    {
+      "name": "ridge__market",
+      "family": "ridge",
+      "group": "market",
+      "alpha": 1000.0,
+      "metrics": {
+        "mae_usd": 4.388624535146267,
+        "rmse_usd": 6.552971672533224,
+        "mape_percent": 1.0081819521256319
+      },
+      "improvement_vs_naive_percent": -0.24684401568333403
+    },
+    {
+      "name": "ridge__market_text",
+      "family": "ridge",
+      "group": "market_text",
+      "alpha": 1000.0,
+      "metrics": {
+        "mae_usd": 4.399940140771273,
+        "rmse_usd": 6.5662849238688485,
+        "mape_percent": 1.0106065442510506
+      },
+      "improvement_vs_naive_percent": -0.5053199328980629
+    },
+    {
+      "name": "random_forest__price_only",
+      "family": "random_forest",
+      "group": "price_only",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.464839581659257,
+        "rmse_usd": 6.5297293342154195,
+        "mape_percent": 1.0229973599737792
+      },
+      "improvement_vs_naive_percent": -1.9877807985519524
+    },
+    {
+      "name": "random_forest__market",
+      "family": "random_forest",
+      "group": "market",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.446903384718482,
+        "rmse_usd": 6.529469036060667,
+        "mape_percent": 1.018283546370365
+      },
+      "improvement_vs_naive_percent": -1.5780744947757164
+    },
+    {
+      "name": "random_forest__market_text",
+      "family": "random_forest",
+      "group": "market_text",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.424428994458075,
+        "rmse_usd": 6.552191660594669,
+        "mape_percent": 1.0128466000054348
+      },
+      "improvement_vs_naive_percent": -1.0647048326550168
+    }
+  ],
+  "selected_model": "naive_last_close",
+  "best_learned_model": "ridge__market",
+  "selection": "Minimum validation MAE; ties keep earlier candidate. No test-based tuning.",
+  "estimator_target": "Next-session simple return, converted to closing price using last close. Final target/metrics are USD price.",
+  "versions": {
+    "python": "3.12.8",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "pandas_market_calendars": "5.5.0",
+    "joblib": "1.6.0"
+  },
+  "protocol_sha256": "017a21be6a978bf7ae9065433d528051b6143421adafceb787abb3a9f3c26f1a",
+  "trials": [
+    {
+      "name": "ridge__price_only",
+      "family": "ridge",
+      "group": "price_only",
+      "alpha": 1.0,
+      "metrics": {
+        "mae_usd": 4.389157661386503,
+        "rmse_usd": 6.5714505624863415,
+        "mape_percent": 1.008642759989541
+      },
+      "improvement_vs_naive_percent": -0.259021913933144
+    },
+    {
+      "name": "ridge__price_only",
+      "family": "ridge",
+      "group": "price_only",
+      "alpha": 100.0,
+      "metrics": {
+        "mae_usd": 4.39304093973878,
+        "rmse_usd": 6.569244526852326,
+        "mape_percent": 1.0093314085510876
+      }
+    },
+    {
+      "name": "ridge__price_only",
+      "family": "ridge",
+      "group": "price_only",
+      "alpha": 1000.0,
+      "metrics": {
+        "mae_usd": 4.39221663303692,
+        "rmse_usd": 6.548158188337559,
+        "mape_percent": 1.0089339388438472
+      }
+    },
+    {
+      "name": "ridge__market",
+      "family": "ridge",
+      "group": "market",
+      "alpha": 1.0,
+      "metrics": {
+        "mae_usd": 4.472681825093644,
+        "rmse_usd": 6.6434817891300035,
+        "mape_percent": 1.0282313709589561
+      }
+    },
+    {
+      "name": "ridge__market",
+      "family": "ridge",
+      "group": "market",
+      "alpha": 100.0,
+      "metrics": {
+        "mae_usd": 4.412362918193691,
+        "rmse_usd": 6.594083643284057,
+        "mape_percent": 1.0138915021626869
+      }
+    },
+    {
+      "name": "ridge__market",
+      "family": "ridge",
+      "group": "market",
+      "alpha": 1000.0,
+      "metrics": {
+        "mae_usd": 4.388624535146267,
+        "rmse_usd": 6.552971672533224,
+        "mape_percent": 1.0081819521256319
+      },
+      "improvement_vs_naive_percent": -0.24684401568333403
+    },
+    {
+      "name": "ridge__market_text",
+      "family": "ridge",
+      "group": "market_text",
+      "alpha": 1.0,
+      "metrics": {
+        "mae_usd": 4.675000345506452,
+        "rmse_usd": 6.88132484321524,
+        "mape_percent": 1.0735015236393468
+      }
+    },
+    {
+      "name": "ridge__market_text",
+      "family": "ridge",
+      "group": "market_text",
+      "alpha": 100.0,
+      "metrics": {
+        "mae_usd": 4.4261171800285295,
+        "rmse_usd": 6.618490274931805,
+        "mape_percent": 1.0169057849820933
+      }
+    },
+    {
+      "name": "ridge__market_text",
+      "family": "ridge",
+      "group": "market_text",
+      "alpha": 1000.0,
+      "metrics": {
+        "mae_usd": 4.399940140771273,
+        "rmse_usd": 6.5662849238688485,
+        "mape_percent": 1.0106065442510506
+      },
+      "improvement_vs_naive_percent": -0.5053199328980629
+    },
+    {
+      "name": "random_forest__price_only",
+      "family": "random_forest",
+      "group": "price_only",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.464839581659257,
+        "rmse_usd": 6.5297293342154195,
+        "mape_percent": 1.0229973599737792
+      },
+      "improvement_vs_naive_percent": -1.9877807985519524
+    },
+    {
+      "name": "random_forest__market",
+      "family": "random_forest",
+      "group": "market",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.446903384718482,
+        "rmse_usd": 6.529469036060667,
+        "mape_percent": 1.018283546370365
+      },
+      "improvement_vs_naive_percent": -1.5780744947757164
+    },
+    {
+      "name": "random_forest__market_text",
+      "family": "random_forest",
+      "group": "market_text",
+      "alpha": null,
+      "metrics": {
+        "mae_usd": 4.424428994458075,
+        "rmse_usd": 6.552191660594669,
+        "mape_percent": 1.0128466000054348
+      },
+      "improvement_vs_naive_percent": -1.0647048326550168
+    }
+  ],
+  "test_evaluated": false,
+  "text_effect": {
+    "ridge": {
+      "mae_difference_text_minus_market": 0.011315605625005887
+    },
+    "random_forest": {
+      "mae_difference_text_minus_market": -0.022474390260406985
+    }
+  }
+}

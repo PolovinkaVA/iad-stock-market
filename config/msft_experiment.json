@@ -1,0 +1,18 @@
+{
+  "ticker": "MSFT",
+  "database": "data/msft.sqlite",
+  "start": "2018-01-01",
+  "end": "2026-10-15",
+  "calendar": "NASDAQ",
+  "minutes_before_open": 30,
+  "text_window_days": 7,
+  "validation_sessions": 252,
+  "test_sessions": 252,
+  "seed": 42,
+  "ridge_alphas": [1.0, 100.0, 1000.0],
+  "forest": {"n_estimators": 200, "min_samples_leaf": 15, "max_depth": 8, "max_features": 1.0},
+  "tfidf": {"max_features": 300, "min_df": 3, "max_df": 0.95},
+  "processed_dir": "data/processed/msft",
+  "model_dir": "models/msft",
+  "reports_dir": "reports"
+}
