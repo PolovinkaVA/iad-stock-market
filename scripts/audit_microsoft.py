@@ -10,7 +10,7 @@ import hashlib
 import io
 import json
 import math
-import re
+import sys
 import time
 import threading
 import urllib.error
@@ -18,52 +18,15 @@ import urllib.request
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
-from html import unescape
-from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'src'))
+from stocks_forecast.microsoft_source import Page, parse_date, url_date, article_text
 CACHE = ROOT / 'tmp/us_sources/audit_cache'
 REPORT = ROOT / 'reports/microsoft_audit.json'
 MANIFEST = ROOT / 'reports/microsoft_articles.csv'
 ARCHIVE = 'https://news.microsoft.com/source/tag/press-releases/'
-
-
-class Page(HTMLParser):
-    def __init__(self):
-        super().__init__(convert_charrefs=True)
-        self.in_main = False
-        self.skip = 0
-        self.links = set()
-        self.meta = {}
-        self.parts = []
-
-    def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if tag == 'main':
-            self.in_main = True
-        if self.in_main and tag in ('script', 'style', 'noscript'):
-            self.skip += 1
-        if tag == 'meta':
-            self.meta[attrs.get('property', attrs.get('name', ''))] = attrs.get('content', '')
-        if self.in_main and tag == 'a':
-            href = attrs.get('href', '')
-            if re.fullmatch(r'https://news\.microsoft\.com/source/\d{4}/\d{2}/\d{2}/[^/?#]+/', href):
-                self.links.add(href)
-
-    def handle_endtag(self, tag):
-        if tag == 'main':
-            self.in_main = False
-        if self.in_main and tag in ('script', 'style', 'noscript'):
-            self.skip = max(0, self.skip - 1)
-
-    def handle_data(self, text):
-        if self.in_main and not self.skip:
-            self.parts.append(text)
-
-    @property
-    def text(self):
-        return ' '.join(' '.join(self.parts).split())
 
 
 class Fetcher:
@@ -112,19 +75,6 @@ class Fetcher:
                 time.sleep(2 ** (attempt + 1))
 
 
-def url_date(url):
-    return '-'.join(re.search(r'/source/(\d{4})/(\d{2})/(\d{2})/', url).groups())
-
-
-def parse_date(value):
-    if not value:
-        return None
-    parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
-    if parsed.tzinfo is None:
-        raise ValueError('Timestamp has no timezone')
-    return parsed
-
-
 def inspect_article(url, fetcher):
     record = {'url': url, 'url_date': url_date(url)}
     try:
@@ -135,10 +85,7 @@ def inspect_article(url, fetcher):
         modified_raw = page.meta.get('article:modified_time', '')
         published, modified = parse_date(published_raw), parse_date(modified_raw)
         lag = (modified - published).total_seconds() / 86400 if published and modified else None
-        text = page.text
-        # Remove press-contact / editor boilerplate before counting usable text.
-        for marker in ['For more information, press only:', 'Note to editors:']:
-            text = text.split(marker, 1)[0]
+        text = article_text(page)
         record.update({'status': 'ok', 'published_at': published_raw, 'modified_at': modified_raw,
                        'modification_lag_days': round(lag, 3) if lag is not None else None,
                        'text_chars': len(text), 'text_words': len(text.split()),

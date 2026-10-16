@@ -1,0 +1,17 @@
+{
+  "ticker": "MSFT",
+  "start": "2018-01-01",
+  "timezone": "America/New_York",
+  "database": "data/msft.sqlite",
+  "raw_dir": "data/raw/msft",
+  "audit_cache": "tmp/us_sources/audit_cache",
+  "archive_url": "https://news.microsoft.com/source/tag/press-releases/",
+  "max_archive_pages": 100,
+  "discovery_overlap_days": 30,
+  "price_overlap_days": 7,
+  "article_refresh_days": 30,
+  "article_refresh_limit": 20,
+  "timeout_seconds": 25,
+  "attempts": 3,
+  "request_interval_seconds": 0.6
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "97a18828-89c0-4506-820d-f0c38c3c55f6",
+  "status": "success",
+  "mode": "audit_import",
+  "prices_seen": 2207,
+  "price_versions_added": 2207,
+  "articles_seen": 526,
+  "article_versions_added": 526,
+  "archive_pages": 45,
+  "errors": 0,
+  "network_requests": 0,
+  "price_rows_total": 2207,
+  "articles_total": 526,
+  "pending_articles": 0
+}

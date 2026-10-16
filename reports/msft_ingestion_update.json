@@ -1,0 +1,15 @@
+{
+  "run_id": "3b1fa0ff-0d3a-4637-9dc6-b8b66ec60782",
+  "status": "success",
+  "mode": "network",
+  "prices_seen": 6,
+  "price_versions_added": 0,
+  "articles_seen": 0,
+  "article_versions_added": 0,
+  "archive_pages": 2,
+  "errors": 0,
+  "network_requests": 3,
+  "price_rows_total": 2209,
+  "articles_total": 526,
+  "pending_articles": 0
+}

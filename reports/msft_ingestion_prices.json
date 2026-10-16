@@ -1,0 +1,15 @@
+{
+  "run_id": "759ccfb7-ab65-4efa-a406-03543787e0fa",
+  "status": "success",
+  "mode": "network",
+  "prices_seen": 2209,
+  "price_versions_added": 1470,
+  "articles_seen": 0,
+  "article_versions_added": 0,
+  "archive_pages": 0,
+  "errors": 0,
+  "network_requests": 1,
+  "price_rows_total": 2209,
+  "articles_total": 526,
+  "pending_articles": 0
+}

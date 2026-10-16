@@ -8,6 +8,8 @@ venv/
 
 # Local and downloaded data
 data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
 data/*.db
 data/raw/*
 data/processed/*

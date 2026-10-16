@@ -1,0 +1,23 @@
+{
+  "price_dates": {
+    "first": "2018-01-02",
+    "last": "2026-10-15",
+    "rows": 2209
+  },
+  "article_rows": 526,
+  "article_hashes_different_from_audit": [],
+  "historical_fields_changed_since_audit": {
+    "adjusted_close": 1467,
+    "volume": 1
+  },
+  "maximum_absolute_change": {
+    "adjusted_close": 0.00018310546875,
+    "volume": 27500.0
+  },
+  "corporate_action_records": {
+    "dividends": 35
+  },
+  "database_integrity": "ok",
+  "foreign_key_violations": [],
+  "note": "Calendar completeness, corporate-action interpretation and forecasting cutoffs remain to be checked."
+}
