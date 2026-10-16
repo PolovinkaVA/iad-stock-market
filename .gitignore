@@ -30,6 +30,7 @@ tmp/
 .codex-docx-review/
 .codex-pptx-build/
 reports/*.docx
+!reports/Отчет_ИАД_MSFT_Половинка_ВА.docx
 reports/*.pptx
 /*.pdf
 .env.*

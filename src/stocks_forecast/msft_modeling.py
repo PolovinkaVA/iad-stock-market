@@ -128,7 +128,7 @@ def validate(config, root=ROOT):
     return report
 
 
-def evaluate_test(config, root=ROOT):
+def evaluate_test(config, root=ROOT, rebuild_artifacts=False):
     root = Path(root)
     rows, metadata = input_data(config, root)
     reports = root/config['reports_dir']
@@ -138,25 +138,26 @@ def evaluate_test(config, root=ROOT):
     if sha(check) != expected or protocol['dataset'] != metadata or protocol['config'] != config or protocol['versions'] != versions():
         raise ValueError('Frozen protocol/data/environment mismatch')
     path = reports/'msft_test.json'
+    previous = None
     if path.exists():
-        result = json.loads(path.read_text(encoding='utf-8'))
-        if result['protocol_sha256'] != expected:
+        previous = json.loads(path.read_text(encoding='utf-8'))
+        if previous['protocol_sha256'] != expected:
             raise ValueError('Another holdout protocol already exists')
-        return result
+        if not rebuild_artifacts:
+            return previous
     splits = split_rows(rows, config)
     fit = pd.DataFrame(splits['train']+splits['validation'])
     test = pd.DataFrame(splits['test'])
     model_dir = root/config['model_dir']
     model_dir.mkdir(parents=True, exist_ok=True)
-    results, predictions = [], {}
+    results, predictions, bundles = [], {}, {}
     for candidate in protocol['candidates']:
         model = None
         if candidate['family'] != 'naive':
             model = model_pipeline(candidate['family'], candidate['group'], config, candidate['alpha'])
             model.fit(fit, fit['target_return'])
-            joblib.dump({'pipeline':model, 'candidate':candidate, 'protocol_sha256':expected,
-                         'fit_last_target':fit['target_date'].iloc[-1], 'purpose':'frozen holdout model'},
-                        model_dir/(candidate['name']+'.joblib'))
+            bundles[candidate['name']] = {'pipeline':model, 'candidate':candidate, 'protocol_sha256':expected,
+                         'fit_last_target':fit['target_date'].iloc[-1], 'purpose':'frozen holdout model'}
         prediction = predict_close(model,test)
         predictions[candidate['name']] = prediction
         results.append({'name':candidate['name'], 'metrics':metrics(test['target_close'],prediction)})
@@ -172,18 +173,30 @@ def evaluate_test(config, root=ROOT):
                 next(r['metrics']['mae_usd'] for r in results if r['name']==family+'__market_text')-
                 next(r['metrics']['mae_usd'] for r in results if r['name']==family+'__market')}
                 for family in ('ridge','random_forest')}}
+    if previous is not None:
+        old = {r['name']:r['metrics'] for r in previous['results']}
+        if set(old) != {r['name'] for r in results} or any(
+            not np.isclose(value, old[row['name']][key], rtol=0, atol=1e-10)
+            for row in results for key,value in row['metrics'].items()):
+            raise ValueError('Rebuilt predictions disagree with the published test. Existing artifacts were not replaced.')
+    for name,bundle in bundles.items():
+        joblib.dump(bundle, model_dir/(name+'.joblib'))
     predictions_file(root/config['processed_dir']/'test_predictions.csv',test,predictions)
-    write_json(path,result)
-    return result
+    if previous is None:
+        write_json(path,result)
+    return previous if previous is not None else result
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT/'config/msft_experiment.json')
     parser.add_argument('--stage', choices=('validate','test'), default='validate')
+    parser.add_argument('--rebuild-artifacts', action='store_true', help='Recreate models/predictions from the frozen protocol and verify previously published metrics')
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding='utf-8-sig'))
-    result = validate(config) if args.stage=='validate' else evaluate_test(config)
+    if args.rebuild_artifacts and args.stage!='test':
+        parser.error('--rebuild-artifacts requires --stage test')
+    result = validate(config) if args.stage=='validate' else evaluate_test(config, rebuild_artifacts=args.rebuild_artifacts)
     keys = ['selected_model','best_learned_model','text_effect','protocol_sha256'] if args.stage=='validate' else ['selected_on_validation','test_period','results','text_effect']
     print(json.dumps({k:result[k] for k in keys}, indent=2))
     return 0

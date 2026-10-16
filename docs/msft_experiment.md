@@ -56,19 +56,18 @@
 
 ## Запуск
 
-Проверенное окружение — Python 3.12.8. Команды ниже используют отдельное окружение проекта:
+Проверенное окружение — Python 3.12.8. Для опубликованного опыта нужен сохранённый снимок; команды восстановления:
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-msft.lock.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-dashboard.lock.txt
+.\.venv\Scripts\python.exe scripts/prepare_msft.py --snapshot data/processed/msft/snapshot.json
+.\.venv\Scripts\python.exe scripts/train_msft.py --stage test --rebuild-artifacts
+.\.venv\Scripts\python.exe scripts/explain_msft.py
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe scripts/ingest_msft.py --end 2026-10-15
-.\.venv\Scripts\python.exe scripts/prepare_msft.py
-.\.venv\Scripts\python.exe scripts/train_msft.py --stage validate
-.\.venv\Scripts\python.exe scripts/train_msft.py --stage test
 ```
 
-Если база уже заполнена, повторная загрузка перед воспроизведением замороженного эксперимента не нужна. Сырые данные, тексты, числовой датасет, предсказания по датам и обученные модели хранятся локально. Новая загрузка источников может дать другой снимок; полное совпадение метрик требует сохранённых данных и зафиксированных зависимостей.
+База SQLite для восстановления по снимку не нужна. Сырые данные, тексты, числовой датасет, предсказания по датам и обученные модели хранятся локально. Новая загрузка источников может дать другой снимок; полное совпадение метрик требует сохранённых данных и зафиксированных зависимостей. [Полная инструкция](msft_reproduction.md) описывает перенос снимка, проверку в отдельном каталоге и новый эксперимент со свежими источниками.
 
 Конфигурация: `config/msft_experiment.json`. Каталог снимка: `data/processed/msft/`. Отчёты: `reports/msft_data_quality.json`, `reports/msft_validation.json`, `reports/msft_protocol.json`, `reports/msft_test.json`. Модели для итоговой проверки сохраняются в `models/msft/`; они обучены только по конец validation, не переобучены на тестовом году и не являются моделью, обновлённой для текущего прогноза.
 

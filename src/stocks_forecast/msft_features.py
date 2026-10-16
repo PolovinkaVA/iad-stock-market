@@ -206,10 +206,10 @@ def split_rows(rows, config):
     return splits
 
 
-def prepare(config, root=ROOT):
+def prepare(config, root=ROOT, snapshot=None):
     root = Path(root)
     sessions = schedule(config)
-    snapshot = load_snapshot(config, root)
+    snapshot = load_snapshot(config, root) if snapshot is None else snapshot
     quality = validate_prices(snapshot['prices'], sessions, config)
     quality['corporate_actions'] = check_actions(snapshot['events'], snapshot['prices'], sessions, config)
     rows = build_rows(snapshot, sessions, config)
@@ -247,8 +247,10 @@ def prepare(config, root=ROOT):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT/'config/msft_experiment.json')
+    parser.add_argument('--snapshot', type=Path, help='Rebuild features from a retained JSON snapshot instead of the mutable database')
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding='utf-8-sig'))
-    result = prepare(config)
+    snapshot = json.loads(args.snapshot.read_text(encoding='utf-8')) if args.snapshot else None
+    result = prepare(config, snapshot=snapshot)
     print(json.dumps({k:result[k] for k in ['price_rows','feature_rows','missing_sessions','splits','text_rows_by_split','snapshot_sha256']}, indent=2))
     return 0

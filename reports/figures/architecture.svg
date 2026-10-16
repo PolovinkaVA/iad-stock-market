@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="900" height="300" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="900" height="300"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-300)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="900" height="300" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="140" width="150" height="82" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="53.543701171875" y="190" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Источники</text>
+			<text x="45.658935546875" y="165" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,330) scale(1,-1)">Yahoo и Microsoft</text>
+			<path d="M 165,180 L 194,180 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="194 180, 185 184, 185 176" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,45%,65%); fill-rule: evenodd;"/>
+			<rect x="195" y="140" width="150" height="82" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="239.7509765625" y="190" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Загрузка</text>
+			<text x="228.376708984375" y="165" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,330) scale(1,-1)">Версии и SQLite</text>
+			<path d="M 345,180 L 374,180 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="374 180, 365 184, 365 176" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,45%,65%); fill-rule: evenodd;"/>
+			<rect x="375" y="140" width="150" height="82" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="417.0263671875" y="190" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Признаки</text>
+			<text x="415.7646484375" y="165" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,330) scale(1,-1)">Время и окна</text>
+			<path d="M 525,180 L 554,180 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="554 180, 545 184, 545 176" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,45%,65%); fill-rule: evenodd;"/>
+			<rect x="555" y="140" width="150" height="82" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="584.080810546875" y="190" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Эксперимент</text>
+			<text x="598.1171875" y="165" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,330) scale(1,-1)">Выбор и test</text>
+			<path d="M 705,180 L 734,180 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="734 180, 725 184, 725 176" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,45%,65%); fill-rule: evenodd;"/>
+			<rect x="735" y="140" width="150" height="82" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="770.408935546875" y="190" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Интерфейс</text>
+			<text x="764.7216796875" y="165" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,330) scale(1,-1)">Ошибки и вклады</text>
+			<text x="188.65625" y="80" style="font-family: Arial; font-size: 16px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,160) scale(1,-1)">Замороженный эксперимент и рабочий расчёт сохраняются отдельно</text>
+		</g>
+	</g>
+</svg>

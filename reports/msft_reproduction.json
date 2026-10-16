@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "environment": {
+    "python": "3.12.8",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "pandas_market_calendars": "5.5.0",
+    "joblib": "1.6.0"
+  },
+  "database_used": false,
+  "input": "Retained research snapshot; live sources were not re-downloaded",
+  "snapshot_sha256": "686028db65227ac1bec9422844df566855a25d622528f67d328ae9fe90953915",
+  "protocol_sha256": "017a21be6a978bf7ae9065433d528051b6143421adafceb787abb3a9f3c26f1a",
+  "model_files_rebuilt": 6,
+  "test_rows": 252,
+  "max_prediction_difference_usd": 0.0,
+  "test_report_unchanged": true,
+  "explained_rows": 252,
+  "limitations": [
+    "Same Windows machine, new Python virtual environment; not a different operating system.",
+    "Source availability was tested separately; reproduction requires the retained snapshot."
+  ]
+}

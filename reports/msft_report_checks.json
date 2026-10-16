@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-16",
+  "document": "Отчет_ИАД_MSFT_Половинка_ВА.docx",
+  "pages": 36,
+  "tables": 18,
+  "figures": 12,
+  "title_reference_sha256": "61d5edb229c274534852d32a570b790232f5e2c566d71d9df80a0578c6b29be3",
+  "title_reference_unchanged": true,
+  "reference_scope": "Title page only",
+  "reviewer": "к. т. н., доцент Тетерин Н. Н.",
+  "page_size": "A4",
+  "body_font": "Times New Roman 14 pt",
+  "body_line_spacing": 1.15,
+  "rendering": "Microsoft Word field update and PDF export; packaged render_docx.py rasterizer via Word PDF adapter",
+  "visual_review": "All 36 pages inspected; no clipped content, overlapping labels, blank pages or broken fields",
+  "docx_sha256": "15926f9df1e5d8eb1b3a3f9f71fc56bd247f5e992c19ec9c61de1cab64c4dcfb",
+  "remaining_submission_materials": [
+    "Presentation",
+    "Talk and demonstration outline"
+  ]
+}

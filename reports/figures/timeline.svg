@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="900" height="300" preserveAspectRatio="xMinYMin meet" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="900" height="300"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-300)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="900" height="300" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 70,150 L 830,150 Z" style="stroke: rgb(14%,21%,27%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 100,140 L 100,160 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="24.8935546875" y="190" style="font-family: Arial; font-size: 14px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Предыдущее закрытие</text>
+			<text x="26.244140625" y="115" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,230) scale(1,-1)">OHLCV завершённой сессии</text>
+			<path d="M 430,140 L 430,160 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="378.375" y="190" style="font-family: Arial; font-size: 14px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">09:00 Нью-Йорк</text>
+			<text x="362.453125" y="115" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,230) scale(1,-1)">Отсечка текстов и прогноз</text>
+			<path d="M 780,140 L 780,160 Z" style="stroke: rgb(15%,45%,65%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="708.5439453125" y="190" style="font-family: Arial; font-size: 14px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,380) scale(1,-1)">Следующее закрытие</text>
+			<text x="713.86572265625" y="115" style="font-family: Arial; font-size: 11px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,230) scale(1,-1)">Появление целевой цены</text>
+			<text x="209.322509765625" y="55" style="font-family: Arial; font-size: 15px;fill: rgb(14%,21%,27%); stroke:none;" transform="translate(0,110) scale(1,-1)">Текстовое окно — семь календарных дней до отсечки включительно</text>
+		</g>
+	</g>
+</svg>
