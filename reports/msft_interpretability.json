@@ -1,0 +1,3123 @@
+{
+  "protocol_sha256": "017a21be6a978bf7ae9065433d528051b6143421adafceb787abb3a9f3c26f1a",
+  "model_sha256": "c4926f906743f8a2ae5cb33366794015aa8080b409b489c8fbe9f81804eb004f",
+  "model_name": "ridge__market",
+  "selected_forecast_model": "naive_last_close",
+  "reference": "Mean transformed features on train+validation used to fit this frozen Ridge.",
+  "permutation": {
+    "repeats": 10,
+    "block_size": 20,
+    "seed": 42,
+    "metric": "MAE USD"
+  },
+  "periods": {
+    "full": {
+      "rows": 252,
+      "start": "2025-10-15",
+      "end": "2026-10-15",
+      "ridge_metrics": {
+        "mae_usd": 6.414485082638484,
+        "rmse_usd": 9.184712133773697,
+        "mape_percent": 1.4572814847925917
+      },
+      "naive_metrics": {
+        "mae_usd": 6.1801208011687745,
+        "rmse_usd": 8.86503719291995,
+        "mape_percent": 1.4033794523462266
+      },
+      "contribution_importance": [
+        {
+          "feature": "return_1",
+          "mean_abs_usd": 0.2956269104913588,
+          "mean_abs_bps": 6.720428208789704
+        },
+        {
+          "feature": "return_2",
+          "mean_abs_usd": 0.17077157477748658,
+          "mean_abs_bps": 3.8703239776183924
+        },
+        {
+          "feature": "return_5",
+          "mean_abs_usd": 0.06462061178870468,
+          "mean_abs_bps": 1.4634662466730242
+        },
+        {
+          "feature": "return_20",
+          "mean_abs_usd": 0.1750565810669212,
+          "mean_abs_bps": 3.9815724326783033
+        },
+        {
+          "feature": "return_lag_1",
+          "mean_abs_usd": 0.07145001209392951,
+          "mean_abs_bps": 1.6204061289735046
+        },
+        {
+          "feature": "return_lag_2",
+          "mean_abs_usd": 0.026731134620550122,
+          "mean_abs_bps": 0.6053387541167522
+        },
+        {
+          "feature": "return_lag_5",
+          "mean_abs_usd": 0.2606847460950084,
+          "mean_abs_bps": 5.930965229806657
+        },
+        {
+          "feature": "close_to_mean_5",
+          "mean_abs_usd": 0.23526466211869185,
+          "mean_abs_bps": 5.327182748115213
+        },
+        {
+          "feature": "close_to_mean_20",
+          "mean_abs_usd": 0.06910558188921963,
+          "mean_abs_bps": 1.5729949724320722
+        },
+        {
+          "feature": "volatility_5",
+          "mean_abs_usd": 0.20898314041470623,
+          "mean_abs_bps": 4.696112881159717
+        },
+        {
+          "feature": "volatility_20",
+          "mean_abs_usd": 0.1751983114047983,
+          "mean_abs_bps": 3.9006134052430745
+        },
+        {
+          "feature": "intraday_range",
+          "mean_abs_usd": 0.022109488195481874,
+          "mean_abs_bps": 0.499776640064683
+        },
+        {
+          "feature": "intraday_body",
+          "mean_abs_usd": 0.26087141396830504,
+          "mean_abs_bps": 5.938512845488018
+        },
+        {
+          "feature": "opening_gap",
+          "mean_abs_usd": 0.12486461638159845,
+          "mean_abs_bps": 2.8283792193757624
+        },
+        {
+          "feature": "log_volume",
+          "mean_abs_usd": 0.07622784678927808,
+          "mean_abs_bps": 1.7173972146877456
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "mean_abs_usd": 0.028484534512990115,
+          "mean_abs_bps": 0.6348265467116112
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "mean_abs_usd": 0.01605863768940312,
+          "mean_abs_bps": 0.3588310656949335
+        },
+        {
+          "feature": "volume_change",
+          "mean_abs_usd": 0.09279342263150608,
+          "mean_abs_bps": 2.064333622828124
+        },
+        {
+          "feature": "weekday",
+          "mean_abs_usd": 0.06697622461133762,
+          "mean_abs_bps": 1.4935668667138255
+        },
+        {
+          "feature": "month",
+          "mean_abs_usd": 0.06941247923697973,
+          "mean_abs_bps": 1.5261639303312295
+        }
+      ],
+      "permutation_importance": [
+        {
+          "feature": "return_1",
+          "delta_mae_usd": -0.05972897765187568,
+          "std_delta_mae_usd": 0.027102764096142665
+        },
+        {
+          "feature": "return_2",
+          "delta_mae_usd": -0.03190988280987632,
+          "std_delta_mae_usd": 0.017473336817366156
+        },
+        {
+          "feature": "return_5",
+          "delta_mae_usd": -0.011958402496686204,
+          "std_delta_mae_usd": 0.006594075871824625
+        },
+        {
+          "feature": "return_20",
+          "delta_mae_usd": -0.012171125209336253,
+          "std_delta_mae_usd": 0.020713823850340693
+        },
+        {
+          "feature": "return_lag_1",
+          "delta_mae_usd": 0.012480581606794328,
+          "std_delta_mae_usd": 0.0053594928497934236
+        },
+        {
+          "feature": "return_lag_2",
+          "delta_mae_usd": 0.003867610760646212,
+          "std_delta_mae_usd": 0.0018187486893390494
+        },
+        {
+          "feature": "return_lag_5",
+          "delta_mae_usd": 0.04378130092120358,
+          "std_delta_mae_usd": 0.02072441020626189
+        },
+        {
+          "feature": "close_to_mean_5",
+          "delta_mae_usd": -0.055306677641303814,
+          "std_delta_mae_usd": 0.011248698194865367
+        },
+        {
+          "feature": "close_to_mean_20",
+          "delta_mae_usd": -0.010890602407722393,
+          "std_delta_mae_usd": 0.007651456172147134
+        },
+        {
+          "feature": "volatility_5",
+          "delta_mae_usd": -0.00707375355679174,
+          "std_delta_mae_usd": 0.0238087325556744
+        },
+        {
+          "feature": "volatility_20",
+          "delta_mae_usd": 0.019440184603526856,
+          "std_delta_mae_usd": 0.016570788507902414
+        },
+        {
+          "feature": "intraday_range",
+          "delta_mae_usd": 0.0006023261085347009,
+          "std_delta_mae_usd": 0.0021082986148575535
+        },
+        {
+          "feature": "intraday_body",
+          "delta_mae_usd": -0.034602693398802044,
+          "std_delta_mae_usd": 0.021341014203325476
+        },
+        {
+          "feature": "opening_gap",
+          "delta_mae_usd": -0.02653390567057041,
+          "std_delta_mae_usd": 0.013770620454620292
+        },
+        {
+          "feature": "log_volume",
+          "delta_mae_usd": 0.00039537227970454225,
+          "std_delta_mae_usd": 0.007409958716902168
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "delta_mae_usd": -0.000864165149730134,
+          "std_delta_mae_usd": 0.002092885903094261
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "delta_mae_usd": 0.0015221392055186022,
+          "std_delta_mae_usd": 0.0010277387578374881
+        },
+        {
+          "feature": "volume_change",
+          "delta_mae_usd": -0.004795570099364532,
+          "std_delta_mae_usd": 0.009648626532133749
+        },
+        {
+          "feature": "weekday",
+          "delta_mae_usd": -0.0032324969565911132,
+          "std_delta_mae_usd": 0.005712814360709969
+        },
+        {
+          "feature": "month",
+          "delta_mae_usd": -0.003664786993556035,
+          "std_delta_mae_usd": 0.006880763134308999
+        }
+      ]
+    },
+    "first_half": {
+      "rows": 126,
+      "start": "2025-10-15",
+      "end": "2026-04-16",
+      "ridge_metrics": {
+        "mae_usd": 5.724699837415936,
+        "rmse_usd": 8.286460157762217,
+        "mape_percent": 1.3010999198190976
+      },
+      "naive_metrics": {
+        "mae_usd": 5.456747872488839,
+        "rmse_usd": 7.9281341163859835,
+        "mape_percent": 1.238837437693427
+      },
+      "contribution_importance": [
+        {
+          "feature": "return_1",
+          "mean_abs_usd": 0.25700223769748415,
+          "mean_abs_bps": 5.834781544178047
+        },
+        {
+          "feature": "return_2",
+          "mean_abs_usd": 0.15998215934493717,
+          "mean_abs_bps": 3.62647920978896
+        },
+        {
+          "feature": "return_5",
+          "mean_abs_usd": 0.05576297820374557,
+          "mean_abs_bps": 1.270369857041183
+        },
+        {
+          "feature": "return_20",
+          "mean_abs_usd": 0.1514852341572915,
+          "mean_abs_bps": 3.533173197205449
+        },
+        {
+          "feature": "return_lag_1",
+          "mean_abs_usd": 0.060804183584676666,
+          "mean_abs_bps": 1.3756342881584767
+        },
+        {
+          "feature": "return_lag_2",
+          "mean_abs_usd": 0.022639379141455664,
+          "mean_abs_bps": 0.5115020512355577
+        },
+        {
+          "feature": "return_lag_5",
+          "mean_abs_usd": 0.21735086193207423,
+          "mean_abs_bps": 4.953820617599591
+        },
+        {
+          "feature": "close_to_mean_5",
+          "mean_abs_usd": 0.21907576474528972,
+          "mean_abs_bps": 4.961415191051671
+        },
+        {
+          "feature": "close_to_mean_20",
+          "mean_abs_usd": 0.06144476944556993,
+          "mean_abs_bps": 1.4297804653616317
+        },
+        {
+          "feature": "volatility_5",
+          "mean_abs_usd": 0.19807778725574945,
+          "mean_abs_bps": 4.443526252654307
+        },
+        {
+          "feature": "volatility_20",
+          "mean_abs_usd": 0.14817336433261308,
+          "mean_abs_bps": 3.3243552303065873
+        },
+        {
+          "feature": "intraday_range",
+          "mean_abs_usd": 0.02132732058545622,
+          "mean_abs_bps": 0.4731208328690854
+        },
+        {
+          "feature": "intraday_body",
+          "mean_abs_usd": 0.2420744842710902,
+          "mean_abs_bps": 5.5337818505954415
+        },
+        {
+          "feature": "opening_gap",
+          "mean_abs_usd": 0.10763800955972587,
+          "mean_abs_bps": 2.412554933360663
+        },
+        {
+          "feature": "log_volume",
+          "mean_abs_usd": 0.07626438882445809,
+          "mean_abs_bps": 1.7004107372825406
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "mean_abs_usd": 0.029113047841502256,
+          "mean_abs_bps": 0.6389252186441868
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "mean_abs_usd": 0.016102821543290475,
+          "mean_abs_bps": 0.3547554124583362
+        },
+        {
+          "feature": "volume_change",
+          "mean_abs_usd": 0.0942100124485757,
+          "mean_abs_bps": 2.084712720831856
+        },
+        {
+          "feature": "weekday",
+          "mean_abs_usd": 0.06776493597648045,
+          "mean_abs_bps": 1.503399727401864
+        },
+        {
+          "feature": "month",
+          "mean_abs_usd": 0.05519561054885368,
+          "mean_abs_bps": 1.1934721607965384
+        }
+      ],
+      "permutation_importance": [
+        {
+          "feature": "return_1",
+          "delta_mae_usd": -0.057734132548206495,
+          "std_delta_mae_usd": 0.030855342694662207
+        },
+        {
+          "feature": "return_2",
+          "delta_mae_usd": -0.043326207027755005,
+          "std_delta_mae_usd": 0.013323542997565014
+        },
+        {
+          "feature": "return_5",
+          "delta_mae_usd": -0.008675973273261839,
+          "std_delta_mae_usd": 0.005371457481105414
+        },
+        {
+          "feature": "return_20",
+          "delta_mae_usd": 0.012975504749533772,
+          "std_delta_mae_usd": 0.009247533895287699
+        },
+        {
+          "feature": "return_lag_1",
+          "delta_mae_usd": 0.005119771516526939,
+          "std_delta_mae_usd": 0.009889583120692224
+        },
+        {
+          "feature": "return_lag_2",
+          "delta_mae_usd": -0.00013862898952741177,
+          "std_delta_mae_usd": 0.0027798615901678163
+        },
+        {
+          "feature": "return_lag_5",
+          "delta_mae_usd": 0.028723003532708978,
+          "std_delta_mae_usd": 0.02272899540369388
+        },
+        {
+          "feature": "close_to_mean_5",
+          "delta_mae_usd": -0.049041029935868875,
+          "std_delta_mae_usd": 0.02174372047862518
+        },
+        {
+          "feature": "close_to_mean_20",
+          "delta_mae_usd": -0.0014209185597252373,
+          "std_delta_mae_usd": 0.006339945170737046
+        },
+        {
+          "feature": "volatility_5",
+          "delta_mae_usd": 0.011987722441232852,
+          "std_delta_mae_usd": 0.021096438170930345
+        },
+        {
+          "feature": "volatility_20",
+          "delta_mae_usd": 0.00852139736565496,
+          "std_delta_mae_usd": 0.013393013844353766
+        },
+        {
+          "feature": "intraday_range",
+          "delta_mae_usd": 0.0007122149416385782,
+          "std_delta_mae_usd": 0.0018865840387529056
+        },
+        {
+          "feature": "intraday_body",
+          "delta_mae_usd": -0.059988241586861245,
+          "std_delta_mae_usd": 0.028921270259946476
+        },
+        {
+          "feature": "opening_gap",
+          "delta_mae_usd": -0.01302068087617112,
+          "std_delta_mae_usd": 0.015842150296048275
+        },
+        {
+          "feature": "log_volume",
+          "delta_mae_usd": 0.00012132740707588851,
+          "std_delta_mae_usd": 0.006261456868207337
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "delta_mae_usd": -0.0020037095533115947,
+          "std_delta_mae_usd": 0.0022710691173661777
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "delta_mae_usd": -3.611203186695278e-05,
+          "std_delta_mae_usd": 0.0022812753104324486
+        },
+        {
+          "feature": "volume_change",
+          "delta_mae_usd": -0.0013905415334273031,
+          "std_delta_mae_usd": 0.012626277743251653
+        },
+        {
+          "feature": "weekday",
+          "delta_mae_usd": -0.002194571055671801,
+          "std_delta_mae_usd": 0.0036901972791613972
+        },
+        {
+          "feature": "month",
+          "delta_mae_usd": -0.0067359410444621124,
+          "std_delta_mae_usd": 0.005907175934322017
+        }
+      ]
+    },
+    "second_half": {
+      "rows": 126,
+      "start": "2026-04-17",
+      "end": "2026-10-15",
+      "ridge_metrics": {
+        "mae_usd": 7.104270327861033,
+        "rmse_usd": 10.002622256908385,
+        "mape_percent": 1.6134630497660858
+      },
+      "naive_metrics": {
+        "mae_usd": 6.9034937298487105,
+        "rmse_usd": 9.711974994629292,
+        "mape_percent": 1.5679214669990262
+      },
+      "contribution_importance": [
+        {
+          "feature": "return_1",
+          "mean_abs_usd": 0.33425158328523363,
+          "mean_abs_bps": 7.60607487340136
+        },
+        {
+          "feature": "return_2",
+          "mean_abs_usd": 0.181560990210036,
+          "mean_abs_bps": 4.114168745447824
+        },
+        {
+          "feature": "return_5",
+          "mean_abs_usd": 0.07347824537366379,
+          "mean_abs_bps": 1.6565626363048653
+        },
+        {
+          "feature": "return_20",
+          "mean_abs_usd": 0.198627927976551,
+          "mean_abs_bps": 4.429971668151159
+        },
+        {
+          "feature": "return_lag_1",
+          "mean_abs_usd": 0.08209584060318235,
+          "mean_abs_bps": 1.8651779697885322
+        },
+        {
+          "feature": "return_lag_2",
+          "mean_abs_usd": 0.030822890099644583,
+          "mean_abs_bps": 0.6991754569979469
+        },
+        {
+          "feature": "return_lag_5",
+          "mean_abs_usd": 0.3040186302579426,
+          "mean_abs_bps": 6.908109842013725
+        },
+        {
+          "feature": "close_to_mean_5",
+          "mean_abs_usd": 0.251453559492094,
+          "mean_abs_bps": 5.692950305178756
+        },
+        {
+          "feature": "close_to_mean_20",
+          "mean_abs_usd": 0.07676639433286933,
+          "mean_abs_bps": 1.716209479502513
+        },
+        {
+          "feature": "volatility_5",
+          "mean_abs_usd": 0.219888493573663,
+          "mean_abs_bps": 4.9486995096651265
+        },
+        {
+          "feature": "volatility_20",
+          "mean_abs_usd": 0.20222325847698347,
+          "mean_abs_bps": 4.476871580179565
+        },
+        {
+          "feature": "intraday_range",
+          "mean_abs_usd": 0.022891655805507522,
+          "mean_abs_bps": 0.5264324472602806
+        },
+        {
+          "feature": "intraday_body",
+          "mean_abs_usd": 0.27966834366551985,
+          "mean_abs_bps": 6.343243840380594
+        },
+        {
+          "feature": "opening_gap",
+          "mean_abs_usd": 0.142091223203471,
+          "mean_abs_bps": 3.2442035053908627
+        },
+        {
+          "feature": "log_volume",
+          "mean_abs_usd": 0.07619130475409808,
+          "mean_abs_bps": 1.73438369209295
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "mean_abs_usd": 0.027856021184477976,
+          "mean_abs_bps": 0.630727874779036
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "mean_abs_usd": 0.016014453835515766,
+          "mean_abs_bps": 0.3629067189315309
+        },
+        {
+          "feature": "volume_change",
+          "mean_abs_usd": 0.09137683281443648,
+          "mean_abs_bps": 2.043954524824392
+        },
+        {
+          "feature": "weekday",
+          "mean_abs_usd": 0.06618751324619479,
+          "mean_abs_bps": 1.483734006025787
+        },
+        {
+          "feature": "month",
+          "mean_abs_usd": 0.0836293479251058,
+          "mean_abs_bps": 1.8588556998659205
+        }
+      ],
+      "permutation_importance": [
+        {
+          "feature": "return_1",
+          "delta_mae_usd": -0.05970314575556603,
+          "std_delta_mae_usd": 0.03543515981405105
+        },
+        {
+          "feature": "return_2",
+          "delta_mae_usd": -0.03544278630325737,
+          "std_delta_mae_usd": 0.025432232301821678
+        },
+        {
+          "feature": "return_5",
+          "delta_mae_usd": -0.01387507473810592,
+          "std_delta_mae_usd": 0.012193204092401412
+        },
+        {
+          "feature": "return_20",
+          "delta_mae_usd": -0.015820523170703905,
+          "std_delta_mae_usd": 0.020967886384003244
+        },
+        {
+          "feature": "return_lag_1",
+          "delta_mae_usd": 0.006772819034827027,
+          "std_delta_mae_usd": 0.011058633674186955
+        },
+        {
+          "feature": "return_lag_2",
+          "delta_mae_usd": 0.0034174493548896124,
+          "std_delta_mae_usd": 0.002913907501068164
+        },
+        {
+          "feature": "return_lag_5",
+          "delta_mae_usd": -0.01632858909311121,
+          "std_delta_mae_usd": 0.0306920260453796
+        },
+        {
+          "feature": "close_to_mean_5",
+          "delta_mae_usd": -0.056897686534282954,
+          "std_delta_mae_usd": 0.043518746218186785
+        },
+        {
+          "feature": "close_to_mean_20",
+          "delta_mae_usd": -0.012604720913347921,
+          "std_delta_mae_usd": 0.008887718155402492
+        },
+        {
+          "feature": "volatility_5",
+          "delta_mae_usd": -0.02143364525114011,
+          "std_delta_mae_usd": 0.03759119478218433
+        },
+        {
+          "feature": "volatility_20",
+          "delta_mae_usd": 0.016967463796127014,
+          "std_delta_mae_usd": 0.01863379807146404
+        },
+        {
+          "feature": "intraday_range",
+          "delta_mae_usd": 0.00020978846965569176,
+          "std_delta_mae_usd": 0.002512303629668696
+        },
+        {
+          "feature": "intraday_body",
+          "delta_mae_usd": -0.019007039815909364,
+          "std_delta_mae_usd": 0.037942772296873935
+        },
+        {
+          "feature": "opening_gap",
+          "delta_mae_usd": -0.029111481271777873,
+          "std_delta_mae_usd": 0.024889837006814908
+        },
+        {
+          "feature": "log_volume",
+          "delta_mae_usd": -0.0001774586356305896,
+          "std_delta_mae_usd": 0.005151669712620472
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "delta_mae_usd": 0.0007128476023429364,
+          "std_delta_mae_usd": 0.002305388472490549
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "delta_mae_usd": -0.0002329813893278576,
+          "std_delta_mae_usd": 0.002613019787003725
+        },
+        {
+          "feature": "volume_change",
+          "delta_mae_usd": 0.0015555072877512898,
+          "std_delta_mae_usd": 0.01057046169560533
+        },
+        {
+          "feature": "weekday",
+          "delta_mae_usd": -0.004900598321081251,
+          "std_delta_mae_usd": 0.006267274953032432
+        },
+        {
+          "feature": "month",
+          "delta_mae_usd": -0.003998125534954244,
+          "std_delta_mae_usd": 0.009221516141859114
+        }
+      ]
+    }
+  },
+  "pdp": {
+    "return_1": [
+      {
+        "value": -0.028080580967424607,
+        "mean_predicted_change_bps": 22.274201839213465,
+        "mean_predicted_price_usd": 265.6864229794186
+      },
+      {
+        "value": -0.02085805056341663,
+        "mean_predicted_change_bps": 18.823985894944045,
+        "mean_predicted_price_usd": 265.59495744443973
+      },
+      {
+        "value": -0.01639047303828027,
+        "mean_predicted_change_bps": 16.689815964564595,
+        "mean_predicted_price_usd": 265.5383804076482
+      },
+      {
+        "value": -0.012959240337664317,
+        "mean_predicted_change_bps": 15.050709846631982,
+        "mean_predicted_price_usd": 265.4949275570483
+      },
+      {
+        "value": -0.010298674575779265,
+        "mean_predicted_change_bps": 13.779752730641283,
+        "mean_predicted_price_usd": 265.46123436959954
+      },
+      {
+        "value": -0.008169906434824327,
+        "mean_predicted_change_bps": 12.76283630790117,
+        "mean_predicted_price_usd": 265.4342758237759
+      },
+      {
+        "value": -0.006513956524185831,
+        "mean_predicted_change_bps": 11.971786015966648,
+        "mean_predicted_price_usd": 265.4133050093934
+      },
+      {
+        "value": -0.005121859091573137,
+        "mean_predicted_change_bps": 11.306778533919706,
+        "mean_predicted_price_usd": 265.39567560123675
+      },
+      {
+        "value": -0.0036464426403148287,
+        "mean_predicted_change_bps": 10.60196940473363,
+        "mean_predicted_price_usd": 265.3769910478348
+      },
+      {
+        "value": -0.0022269627198242136,
+        "mean_predicted_change_bps": 9.92388125829547,
+        "mean_predicted_price_usd": 265.35901487008863
+      },
+      {
+        "value": -0.0011543073484164418,
+        "mean_predicted_change_bps": 9.411471831388303,
+        "mean_predicted_price_usd": 265.3454308500976
+      },
+      {
+        "value": 4.606624292983908e-05,
+        "mean_predicted_change_bps": 8.838051177922498,
+        "mean_predicted_price_usd": 265.3302294170035
+      },
+      {
+        "value": 0.0011732920476427143,
+        "mean_predicted_change_bps": 8.299573355516369,
+        "mean_predicted_price_usd": 265.31595432150334
+      },
+      {
+        "value": 0.002146820893752302,
+        "mean_predicted_change_bps": 7.834516850501233,
+        "mean_predicted_price_usd": 265.30362563173037
+      },
+      {
+        "value": 0.0034837874587543365,
+        "mean_predicted_change_bps": 7.195845484442966,
+        "mean_predicted_price_usd": 265.2866943963771
+      },
+      {
+        "value": 0.005042495280433934,
+        "mean_predicted_change_bps": 6.4512479157249345,
+        "mean_predicted_price_usd": 265.26695504786477
+      },
+      {
+        "value": 0.006218934468157744,
+        "mean_predicted_change_bps": 5.889260770513942,
+        "mean_predicted_price_usd": 265.2520567181028
+      },
+      {
+        "value": 0.007748263782100057,
+        "mean_predicted_change_bps": 5.158697368513678,
+        "mean_predicted_price_usd": 265.2326894166123
+      },
+      {
+        "value": 0.00943743061256283,
+        "mean_predicted_change_bps": 4.351779293408091,
+        "mean_predicted_price_usd": 265.21129794587085
+      },
+      {
+        "value": 0.010816324054401834,
+        "mean_predicted_change_bps": 3.6930793818312,
+        "mean_predicted_price_usd": 265.1938357519745
+      },
+      {
+        "value": 0.012597348410524178,
+        "mean_predicted_change_bps": 2.842280799215956,
+        "mean_predicted_price_usd": 265.1712810050326
+      },
+      {
+        "value": 0.014849586675669532,
+        "mean_predicted_change_bps": 1.7663824730024709,
+        "mean_predicted_price_usd": 265.14275884364343
+      },
+      {
+        "value": 0.018121152001153218,
+        "mean_predicted_change_bps": 0.20354975132379133,
+        "mean_predicted_price_usd": 265.10132800763785
+      },
+      {
+        "value": 0.02151158434046667,
+        "mean_predicted_change_bps": -1.4160659596152114,
+        "mean_predicted_price_usd": 265.05839184948024
+      },
+      {
+        "value": 0.02683663381414586,
+        "mean_predicted_change_bps": -3.959851803412556,
+        "mean_predicted_price_usd": 264.990955857985
+      }
+    ],
+    "return_2": [
+      {
+        "value": -0.036480025879477795,
+        "mean_predicted_change_bps": 15.483828468234458,
+        "mean_predicted_price_usd": 265.5110959346067
+      },
+      {
+        "value": -0.02806740301125487,
+        "mean_predicted_change_bps": 13.963801165495521,
+        "mean_predicted_price_usd": 265.47079987410706
+      },
+      {
+        "value": -0.021796150568128503,
+        "mean_predicted_change_bps": 12.830685479075358,
+        "mean_predicted_price_usd": 265.4407608753529
+      },
+      {
+        "value": -0.017504652896122876,
+        "mean_predicted_change_bps": 12.055280027854044,
+        "mean_predicted_price_usd": 265.42020480710465
+      },
+      {
+        "value": -0.014295858504467684,
+        "mean_predicted_change_bps": 11.475501858715486,
+        "mean_predicted_price_usd": 265.40483483569835
+      },
+      {
+        "value": -0.010625012840052413,
+        "mean_predicted_change_bps": 10.812238365099404,
+        "mean_predicted_price_usd": 265.38725166083174
+      },
+      {
+        "value": -0.008592450907229477,
+        "mean_predicted_change_bps": 10.444986714717109,
+        "mean_predicted_price_usd": 265.3775157865512
+      },
+      {
+        "value": -0.006838393516370854,
+        "mean_predicted_change_bps": 10.128056410525387,
+        "mean_predicted_price_usd": 265.36911393568386
+      },
+      {
+        "value": -0.0045372686282327546,
+        "mean_predicted_change_bps": 9.712279700720154,
+        "mean_predicted_price_usd": 265.35809165771394
+      },
+      {
+        "value": -0.0027014626897069985,
+        "mean_predicted_change_bps": 9.380578732686757,
+        "mean_predicted_price_usd": 265.34929823521975
+      },
+      {
+        "value": -0.0007145038924070701,
+        "mean_predicted_change_bps": 9.021566844406165,
+        "mean_predicted_price_usd": 265.3397807977736
+      },
+      {
+        "value": 0.001274311533812213,
+        "mean_predicted_change_bps": 8.66221949277571,
+        "mean_predicted_price_usd": 265.33025446716385
+      },
+      {
+        "value": 0.003005883581440603,
+        "mean_predicted_change_bps": 8.34935193288583,
+        "mean_predicted_price_usd": 265.3219603200134
+      },
+      {
+        "value": 0.0048969141806716465,
+        "mean_predicted_change_bps": 8.007672746005417,
+        "mean_predicted_price_usd": 265.31290237404005
+      },
+      {
+        "value": 0.006715353764814279,
+        "mean_predicted_change_bps": 7.679109602313475,
+        "mean_predicted_price_usd": 265.3041921355514
+      },
+      {
+        "value": 0.008211997468498627,
+        "mean_predicted_change_bps": 7.408689861917685,
+        "mean_predicted_price_usd": 265.29702328391323
+      },
+      {
+        "value": 0.010018285524591997,
+        "mean_predicted_change_bps": 7.0823223062955085,
+        "mean_predicted_price_usd": 265.28837125066167
+      },
+      {
+        "value": 0.01187418391571779,
+        "mean_predicted_change_bps": 6.7469909512818,
+        "mean_predicted_price_usd": 265.27948158628215
+      },
+      {
+        "value": 0.014059381269842991,
+        "mean_predicted_change_bps": 6.352160505156639,
+        "mean_predicted_price_usd": 265.26901459564624
+      },
+      {
+        "value": 0.01594084878786373,
+        "mean_predicted_change_bps": 6.012209215124295,
+        "mean_predicted_price_usd": 265.26000245637374
+      },
+      {
+        "value": 0.018701512691435385,
+        "mean_predicted_change_bps": 5.513401105828746,
+        "mean_predicted_price_usd": 265.246779008536
+      },
+      {
+        "value": 0.021409945307504397,
+        "mean_predicted_change_bps": 5.024030360397577,
+        "mean_predicted_price_usd": 265.2338057460629
+      },
+      {
+        "value": 0.024423791435574854,
+        "mean_predicted_change_bps": 4.4794762453872075,
+        "mean_predicted_price_usd": 265.2193695674993
+      },
+      {
+        "value": 0.029544847161912358,
+        "mean_predicted_change_bps": 3.5541828327603677,
+        "mean_predicted_price_usd": 265.194839955914
+      },
+      {
+        "value": 0.03740024078063514,
+        "mean_predicted_change_bps": 2.1348380028236202,
+        "mean_predicted_price_usd": 265.15721299682326
+      }
+    ],
+    "return_5": [
+      {
+        "value": -0.05083402325162115,
+        "mean_predicted_change_bps": 10.856352437872308,
+        "mean_predicted_price_usd": 265.388196550065
+      },
+      {
+        "value": -0.040103568338946204,
+        "mean_predicted_change_bps": 10.414401635767073,
+        "mean_predicted_price_usd": 265.3764803945542
+      },
+      {
+        "value": -0.03278386692172351,
+        "mean_predicted_change_bps": 10.11292812519939,
+        "mean_predicted_price_usd": 265.368488304676
+      },
+      {
+        "value": -0.02631145980801226,
+        "mean_predicted_change_bps": 9.84635177417466,
+        "mean_predicted_price_usd": 265.36142134163566
+      },
+      {
+        "value": -0.02171539740024031,
+        "mean_predicted_change_bps": 9.657055655401429,
+        "mean_predicted_price_usd": 265.3564030845026
+      },
+      {
+        "value": -0.016687271089332274,
+        "mean_predicted_change_bps": 9.449964299603701,
+        "mean_predicted_price_usd": 265.3509130740356
+      },
+      {
+        "value": -0.012966568466666151,
+        "mean_predicted_change_bps": 9.296721261739577,
+        "mean_predicted_price_usd": 265.34685058731986
+      },
+      {
+        "value": -0.00962799350623441,
+        "mean_predicted_change_bps": 9.159216757628725,
+        "mean_predicted_price_usd": 265.3432053305494
+      },
+      {
+        "value": -0.0055102623175296295,
+        "mean_predicted_change_bps": 8.989621468658058,
+        "mean_predicted_price_usd": 265.33870934418616
+      },
+      {
+        "value": -0.0017727296647003746,
+        "mean_predicted_change_bps": 8.835685259312335,
+        "mean_predicted_price_usd": 265.33462848143205
+      },
+      {
+        "value": 0.001058662401610011,
+        "mean_predicted_change_bps": 8.719069886994598,
+        "mean_predicted_price_usd": 265.3315369974241
+      },
+      {
+        "value": 0.003992896315241325,
+        "mean_predicted_change_bps": 8.598218810106705,
+        "mean_predicted_price_usd": 265.328333224507
+      },
+      {
+        "value": 0.007023507587768928,
+        "mean_predicted_change_bps": 8.473398278855914,
+        "mean_predicted_price_usd": 265.3250242209978
+      },
+      {
+        "value": 0.009838638274669298,
+        "mean_predicted_change_bps": 8.357452657236738,
+        "mean_predicted_price_usd": 265.32195049214107
+      },
+      {
+        "value": 0.012515932829420604,
+        "mean_predicted_change_bps": 8.247184035302858,
+        "mean_predicted_price_usd": 265.31902726105653
+      },
+      {
+        "value": 0.015390748711150662,
+        "mean_predicted_change_bps": 8.128780184284883,
+        "mean_predicted_price_usd": 265.3158883643174
+      },
+      {
+        "value": 0.018223823754618507,
+        "mean_predicted_change_bps": 8.012095495884026,
+        "mean_predicted_price_usd": 265.3127950427338
+      },
+      {
+        "value": 0.020763677177069367,
+        "mean_predicted_change_bps": 7.907487604940279,
+        "mean_predicted_price_usd": 265.310021878137
+      },
+      {
+        "value": 0.023685061098139587,
+        "mean_predicted_change_bps": 7.78716577537374,
+        "mean_predicted_price_usd": 265.30683213561394
+      },
+      {
+        "value": 0.026625642436832957,
+        "mean_predicted_change_bps": 7.66605326971882,
+        "mean_predicted_price_usd": 265.3036214321968
+      },
+      {
+        "value": 0.03019833714890896,
+        "mean_predicted_change_bps": 7.518906172365655,
+        "mean_predicted_price_usd": 265.2997205494122
+      },
+      {
+        "value": 0.03505680518360092,
+        "mean_predicted_change_bps": 7.318802461720693,
+        "mean_predicted_price_usd": 265.29441578204666
+      },
+      {
+        "value": 0.040833263316059326,
+        "mean_predicted_change_bps": 7.080889873135867,
+        "mean_predicted_price_usd": 265.2881086979264
+      },
+      {
+        "value": 0.04689175285210613,
+        "mean_predicted_change_bps": 6.831361373944348,
+        "mean_predicted_price_usd": 265.2814936749715
+      },
+      {
+        "value": 0.058116754030454076,
+        "mean_predicted_change_bps": 6.369041899628009,
+        "mean_predicted_price_usd": 265.26923754412854
+      }
+    ],
+    "return_20": [
+      {
+        "value": -0.08122341918754691,
+        "mean_predicted_change_bps": 14.106918702410518,
+        "mean_predicted_price_usd": 265.4765501198104
+      },
+      {
+        "value": -0.06376983156203667,
+        "mean_predicted_change_bps": 13.214276126906157,
+        "mean_predicted_price_usd": 265.4528860848537
+      },
+      {
+        "value": -0.05113543420166573,
+        "mean_predicted_change_bps": 12.568105193932867,
+        "mean_predicted_price_usd": 265.43575603530695
+      },
+      {
+        "value": -0.04156127160726686,
+        "mean_predicted_change_bps": 12.078446257332898,
+        "mean_predicted_price_usd": 265.4227751328601
+      },
+      {
+        "value": -0.03232750627077108,
+        "mean_predicted_change_bps": 11.606196525734724,
+        "mean_predicted_price_usd": 265.4102557500035
+      },
+      {
+        "value": -0.022619953777151203,
+        "mean_predicted_change_bps": 11.109715524482963,
+        "mean_predicted_price_usd": 265.39709399400914
+      },
+      {
+        "value": -0.014986895023756218,
+        "mean_predicted_change_bps": 10.719331990117352,
+        "mean_predicted_price_usd": 265.38674489140385
+      },
+      {
+        "value": -0.009010195643554784,
+        "mean_predicted_change_bps": 10.413660947450998,
+        "mean_predicted_price_usd": 265.3786415245722
+      },
+      {
+        "value": -0.00292482811557665,
+        "mean_predicted_change_bps": 10.102432204133752,
+        "mean_predicted_price_usd": 265.3703908225964
+      },
+      {
+        "value": 0.0041285333341143406,
+        "mean_predicted_change_bps": 9.741696585445657,
+        "mean_predicted_price_usd": 265.3608276889021
+      },
+      {
+        "value": 0.010671626113654603,
+        "mean_predicted_change_bps": 9.407058039158695,
+        "mean_predicted_price_usd": 265.35195639094417
+      },
+      {
+        "value": 0.017641827707687987,
+        "mean_predicted_change_bps": 9.05057553045151,
+        "mean_predicted_price_usd": 265.34250600757804
+      },
+      {
+        "value": 0.02348849576231071,
+        "mean_predicted_change_bps": 8.751554782260497,
+        "mean_predicted_price_usd": 265.33457894065094
+      },
+      {
+        "value": 0.030116325511157963,
+        "mean_predicted_change_bps": 8.412582466427379,
+        "mean_predicted_price_usd": 265.32559275407266
+      },
+      {
+        "value": 0.03562761857019609,
+        "mean_predicted_change_bps": 8.130714065721696,
+        "mean_predicted_price_usd": 265.31812039742005
+      },
+      {
+        "value": 0.04014903877281212,
+        "mean_predicted_change_bps": 7.899471511972943,
+        "mean_predicted_price_usd": 265.31199013652326
+      },
+      {
+        "value": 0.04414527944297503,
+        "mean_predicted_change_bps": 7.695088628597401,
+        "mean_predicted_price_usd": 265.3065719279037
+      },
+      {
+        "value": 0.04946977933533073,
+        "mean_predicted_change_bps": 7.422773537902908,
+        "mean_predicted_price_usd": 265.2993528303587
+      },
+      {
+        "value": 0.05449473389876908,
+        "mean_predicted_change_bps": 7.165778329837837,
+        "mean_predicted_price_usd": 265.29253986427995
+      },
+      {
+        "value": 0.05993762396336518,
+        "mean_predicted_change_bps": 6.8874083173398395,
+        "mean_predicted_price_usd": 265.28516025021327
+      },
+      {
+        "value": 0.06789094814863117,
+        "mean_predicted_change_bps": 6.4806451958037075,
+        "mean_predicted_price_usd": 265.2743769232791
+      },
+      {
+        "value": 0.07527022271564014,
+        "mean_predicted_change_bps": 6.103241145921089,
+        "mean_predicted_price_usd": 265.26437190797475
+      },
+      {
+        "value": 0.08768152340041566,
+        "mean_predicted_change_bps": 5.468480221901999,
+        "mean_predicted_price_usd": 265.2475443387915
+      },
+      {
+        "value": 0.10128415525670317,
+        "mean_predicted_change_bps": 4.772790109681923,
+        "mean_predicted_price_usd": 265.2291015313495
+      },
+      {
+        "value": 0.12559876665764003,
+        "mean_predicted_change_bps": 3.5292487926178655,
+        "mean_predicted_price_usd": 265.1961351391958
+      }
+    ],
+    "return_lag_1": [
+      {
+        "value": -0.028080580967424607,
+        "mean_predicted_change_bps": 4.745988654247202,
+        "mean_predicted_price_usd": 265.2234075194337
+      },
+      {
+        "value": -0.02085805056341663,
+        "mean_predicted_change_bps": 5.581220002347976,
+        "mean_predicted_price_usd": 265.2455495775887
+      },
+      {
+        "value": -0.01639047303828027,
+        "mean_predicted_change_bps": 6.097861759507442,
+        "mean_predicted_price_usd": 265.2592457970353
+      },
+      {
+        "value": -0.012959240337664317,
+        "mean_predicted_change_bps": 6.4946580281105595,
+        "mean_predicted_price_usd": 265.269764901802
+      },
+      {
+        "value": -0.010306468403001201,
+        "mean_predicted_change_bps": 6.801431160967574,
+        "mean_predicted_price_usd": 265.27789748514374
+      },
+      {
+        "value": -0.008183885407326008,
+        "mean_predicted_change_bps": 7.046891928560852,
+        "mean_predicted_price_usd": 265.2844046721682
+      },
+      {
+        "value": -0.006551166450009308,
+        "mean_predicted_change_bps": 7.2357036025182975,
+        "mean_predicted_price_usd": 265.28941008662565
+      },
+      {
+        "value": -0.005126467461096372,
+        "mean_predicted_change_bps": 7.400459330855174,
+        "mean_predicted_price_usd": 265.2937777758013
+      },
+      {
+        "value": -0.003649875012970205,
+        "mean_predicted_change_bps": 7.571216147657144,
+        "mean_predicted_price_usd": 265.29830455437167
+      },
+      {
+        "value": -0.0022322703104502096,
+        "mean_predicted_change_bps": 7.735151475101762,
+        "mean_predicted_price_usd": 265.30265049464583
+      },
+      {
+        "value": -0.0011966838845186845,
+        "mean_predicted_change_bps": 7.8549092605623345,
+        "mean_predicted_price_usd": 265.3058252843089
+      },
+      {
+        "value": 3.50250737817507e-05,
+        "mean_predicted_change_bps": 7.997347142601321,
+        "mean_predicted_price_usd": 265.3096013253719
+      },
+      {
+        "value": 0.0011662241717743658,
+        "mean_predicted_change_bps": 8.128161814847276,
+        "mean_predicted_price_usd": 265.313069234098
+      },
+      {
+        "value": 0.0021414035539302906,
+        "mean_predicted_change_bps": 8.240933979786337,
+        "mean_predicted_price_usd": 265.31605883433275
+      },
+      {
+        "value": 0.0034591304306007555,
+        "mean_predicted_change_bps": 8.393319187471906,
+        "mean_predicted_price_usd": 265.3200985798933
+      },
+      {
+        "value": 0.004989342924799592,
+        "mean_predicted_change_bps": 8.570276759530184,
+        "mean_predicted_price_usd": 265.32478974104333
+      },
+      {
+        "value": 0.006218934468157744,
+        "mean_predicted_change_bps": 8.712469778448103,
+        "mean_predicted_price_usd": 265.32855929076305
+      },
+      {
+        "value": 0.007748263782100057,
+        "mean_predicted_change_bps": 8.889325217348743,
+        "mean_predicted_price_usd": 265.33324774435374
+      },
+      {
+        "value": 0.00943743061256283,
+        "mean_predicted_change_bps": 9.084664663506231,
+        "mean_predicted_price_usd": 265.33842621063934
+      },
+      {
+        "value": 0.010816324054401834,
+        "mean_predicted_change_bps": 9.24412332465294,
+        "mean_predicted_price_usd": 265.3426534740873
+      },
+      {
+        "value": 0.012597348410524178,
+        "mean_predicted_change_bps": 9.45008540314262,
+        "mean_predicted_price_usd": 265.3481135473113
+      },
+      {
+        "value": 0.014849586675669532,
+        "mean_predicted_change_bps": 9.710539828007011,
+        "mean_predicted_price_usd": 265.35501821753854
+      },
+      {
+        "value": 0.018121152001153218,
+        "mean_predicted_change_bps": 10.088871764925845,
+        "mean_predicted_price_usd": 265.36504783121165
+      },
+      {
+        "value": 0.02151158434046667,
+        "mean_predicted_change_bps": 10.480949778448334,
+        "mean_predicted_price_usd": 265.3754418546118
+      },
+      {
+        "value": 0.02683663381414586,
+        "mean_predicted_change_bps": 11.096751720678478,
+        "mean_predicted_price_usd": 265.39176681948265
+      }
+    ],
+    "return_lag_2": [
+      {
+        "value": -0.028080580967424607,
+        "mean_predicted_change_bps": 6.91828604056505,
+        "mean_predicted_price_usd": 265.2827555681402
+      },
+      {
+        "value": -0.02081333725594494,
+        "mean_predicted_change_bps": 7.2304798967193875,
+        "mean_predicted_price_usd": 265.29103185534404
+      },
+      {
+        "value": -0.016365332408065536,
+        "mean_predicted_change_bps": 7.421561941134537,
+        "mean_predicted_price_usd": 265.29609745752657
+      },
+      {
+        "value": -0.012910927453365124,
+        "mean_predicted_change_bps": 7.569959882134235,
+        "mean_predicted_price_usd": 265.30003150028864
+      },
+      {
+        "value": -0.010298674575779265,
+        "mean_predicted_change_bps": 7.682179773399962,
+        "mean_predicted_price_usd": 265.3030064596987
+      },
+      {
+        "value": -0.008169906434824327,
+        "mean_predicted_change_bps": 7.7736296216737175,
+        "mean_predicted_price_usd": 265.3054308034009
+      },
+      {
+        "value": -0.006513956524185831,
+        "mean_predicted_change_bps": 7.844767649889839,
+        "mean_predicted_price_usd": 265.3073166789268
+      },
+      {
+        "value": -0.005121859091573137,
+        "mean_predicted_change_bps": 7.904570827392113,
+        "mean_predicted_price_usd": 265.3089020665408
+      },
+      {
+        "value": -0.0036464426403148287,
+        "mean_predicted_change_bps": 7.967953310440572,
+        "mean_predicted_price_usd": 265.31058234186673
+      },
+      {
+        "value": -0.0022269627198242136,
+        "mean_predicted_change_bps": 8.028932813496398,
+        "mean_predicted_price_usd": 265.312198913977
+      },
+      {
+        "value": -0.0011966838845186845,
+        "mean_predicted_change_bps": 8.073192609270164,
+        "mean_predicted_price_usd": 265.3133722451434
+      },
+      {
+        "value": 3.50250737817507e-05,
+        "mean_predicted_change_bps": 8.126105650942925,
+        "mean_predicted_price_usd": 265.3147749746369
+      },
+      {
+        "value": 0.0011662241717743658,
+        "mean_predicted_change_bps": 8.174700884913513,
+        "mean_predicted_price_usd": 265.31606323866
+      },
+      {
+        "value": 0.0021414035539302906,
+        "mean_predicted_change_bps": 8.216593660750457,
+        "mean_predicted_price_usd": 265.317173819915
+      },
+      {
+        "value": 0.0034591304306007555,
+        "mean_predicted_change_bps": 8.273201950126538,
+        "mean_predicted_price_usd": 265.3186745107574
+      },
+      {
+        "value": 0.004989342924799592,
+        "mean_predicted_change_bps": 8.338938418898715,
+        "mean_predicted_price_usd": 265.3204171904566
+      },
+      {
+        "value": 0.006218934468157744,
+        "mean_predicted_change_bps": 8.39176049844579,
+        "mean_predicted_price_usd": 265.32181750853596
+      },
+      {
+        "value": 0.007748263782100057,
+        "mean_predicted_change_bps": 8.457459026636789,
+        "mean_predicted_price_usd": 265.32355918242695
+      },
+      {
+        "value": 0.00943743061256283,
+        "mean_predicted_change_bps": 8.530024022036237,
+        "mean_predicted_price_usd": 265.3254828869811
+      },
+      {
+        "value": 0.010816324054401834,
+        "mean_predicted_change_bps": 8.589259968692824,
+        "mean_predicted_price_usd": 265.32705323725435
+      },
+      {
+        "value": 0.012597348410524178,
+        "mean_predicted_change_bps": 8.66577107575317,
+        "mean_predicted_price_usd": 265.3290815535836
+      },
+      {
+        "value": 0.014849586675669532,
+        "mean_predicted_change_bps": 8.762525082759069,
+        "mean_predicted_price_usd": 265.33164651101094
+      },
+      {
+        "value": 0.018121152001153218,
+        "mean_predicted_change_bps": 8.903068407735248,
+        "mean_predicted_price_usd": 265.33537232719584
+      },
+      {
+        "value": 0.02151158434046667,
+        "mean_predicted_change_bps": 9.048718146214313,
+        "mean_predicted_price_usd": 265.339233514862
+      },
+      {
+        "value": 0.02683663381414586,
+        "mean_predicted_change_bps": 9.277477190963902,
+        "mean_predicted_price_usd": 265.3452979377118
+      }
+    ],
+    "return_lag_5": [
+      {
+        "value": -0.028080580967424607,
+        "mean_predicted_change_bps": 20.255739251020536,
+        "mean_predicted_price_usd": 265.6267415971848
+      },
+      {
+        "value": -0.02081333725594494,
+        "mean_predicted_change_bps": 17.16973495139709,
+        "mean_predicted_price_usd": 265.544931345661
+      },
+      {
+        "value": -0.016365332408065536,
+        "mean_predicted_change_bps": 15.280908509039206,
+        "mean_predicted_price_usd": 265.494858386802
+      },
+      {
+        "value": -0.012910927453365124,
+        "mean_predicted_change_bps": 13.81401005811667,
+        "mean_predicted_price_usd": 265.45597077694197
+      },
+      {
+        "value": -0.010298674575779265,
+        "mean_predicted_change_bps": 12.70472792420399,
+        "mean_predicted_price_usd": 265.4265636078083
+      },
+      {
+        "value": -0.008135449751568644,
+        "mean_predicted_change_bps": 11.786123653643903,
+        "mean_predicted_price_usd": 265.4022113259809
+      },
+      {
+        "value": -0.006437027419540429,
+        "mean_predicted_change_bps": 11.064895795145622,
+        "mean_predicted_price_usd": 265.3830915105882
+      },
+      {
+        "value": -0.005106269901327419,
+        "mean_predicted_change_bps": 10.499795244509839,
+        "mean_predicted_price_usd": 265.36811064416844
+      },
+      {
+        "value": -0.0036327223738021885,
+        "mean_predicted_change_bps": 9.874059520460964,
+        "mean_predicted_price_usd": 265.3515223338481
+      },
+      {
+        "value": -0.00219642830154867,
+        "mean_predicted_change_bps": 9.264143318600771,
+        "mean_predicted_price_usd": 265.3353534004838
+      },
+      {
+        "value": -0.001151019454923921,
+        "mean_predicted_change_bps": 8.820214874250924,
+        "mean_predicted_price_usd": 265.32358481749924
+      },
+      {
+        "value": 4.606624292983908e-05,
+        "mean_predicted_change_bps": 8.311877496661825,
+        "mean_predicted_price_usd": 265.3101087479019
+      },
+      {
+        "value": 0.0011732920476427143,
+        "mean_predicted_change_bps": 7.833205827168281,
+        "mean_predicted_price_usd": 265.29741911889414
+      },
+      {
+        "value": 0.0021545114068058785,
+        "mean_predicted_change_bps": 7.416535177129662,
+        "mean_predicted_price_usd": 265.2863731424882
+      },
+      {
+        "value": 0.003509154661280188,
+        "mean_predicted_change_bps": 6.841291649633805,
+        "mean_predicted_price_usd": 265.2711233848396
+      },
+      {
+        "value": 0.005065822471331929,
+        "mean_predicted_change_bps": 6.180259249231895,
+        "mean_predicted_price_usd": 265.2535993564548
+      },
+      {
+        "value": 0.006232065869511694,
+        "mean_predicted_change_bps": 5.685018923727877,
+        "mean_predicted_price_usd": 265.2404704908861
+      },
+      {
+        "value": 0.007755926825238013,
+        "mean_predicted_change_bps": 5.037917815233164,
+        "mean_predicted_price_usd": 265.2233157823026
+      },
+      {
+        "value": 0.009438932353134116,
+        "mean_predicted_change_bps": 4.323236637392228,
+        "mean_predicted_price_usd": 265.204369520003
+      },
+      {
+        "value": 0.010830466382749598,
+        "mean_predicted_change_bps": 3.732327598290884,
+        "mean_predicted_price_usd": 265.18870446823286
+      },
+      {
+        "value": 0.012619792178901301,
+        "mean_predicted_change_bps": 2.9724979682994297,
+        "mean_predicted_price_usd": 265.1685613164063
+      },
+      {
+        "value": 0.01492557769939637,
+        "mean_predicted_change_bps": 1.9933559011334347,
+        "mean_predicted_price_usd": 265.14260417214626
+      },
+      {
+        "value": 0.018177462878034567,
+        "mean_predicted_change_bps": 0.6124566164009025,
+        "mean_predicted_price_usd": 265.1059964079164
+      },
+      {
+        "value": 0.02151158434046667,
+        "mean_predicted_change_bps": -0.803363958362422,
+        "mean_predicted_price_usd": 265.06846287714717
+      },
+      {
+        "value": 0.02683663381414586,
+        "mean_predicted_change_bps": -3.064623690924177,
+        "mean_predicted_price_usd": 265.0085166782699
+      }
+    ],
+    "close_to_mean_5": [
+      {
+        "value": -0.0274337719144149,
+        "mean_predicted_change_bps": 18.17607640703616,
+        "mean_predicted_price_usd": 265.58266584310536
+      },
+      {
+        "value": -0.020723452870460513,
+        "mean_predicted_change_bps": 16.07030705517685,
+        "mean_predicted_price_usd": 265.5268417082046
+      },
+      {
+        "value": -0.017017710026835525,
+        "mean_predicted_change_bps": 14.907405611167576,
+        "mean_predicted_price_usd": 265.49601308633805
+      },
+      {
+        "value": -0.013236405950505705,
+        "mean_predicted_change_bps": 13.720792250187397,
+        "mean_predicted_price_usd": 265.46455585942005
+      },
+      {
+        "value": -0.010512041930874405,
+        "mean_predicted_change_bps": 12.865857899336161,
+        "mean_predicted_price_usd": 265.4418914728902
+      },
+      {
+        "value": -0.008349839629337663,
+        "mean_predicted_change_bps": 12.18733586345803,
+        "mean_predicted_price_usd": 265.4239037926959
+      },
+      {
+        "value": -0.006497339060522565,
+        "mean_predicted_change_bps": 11.606001519060902,
+        "mean_predicted_price_usd": 265.4084925669435
+      },
+      {
+        "value": -0.0048400436476884814,
+        "mean_predicted_change_bps": 11.08592462488294,
+        "mean_predicted_price_usd": 265.39470528170557
+      },
+      {
+        "value": -0.0029780939104050164,
+        "mean_predicted_change_bps": 10.501625031109306,
+        "mean_predicted_price_usd": 265.37921544692546
+      },
+      {
+        "value": -0.0015387968859472557,
+        "mean_predicted_change_bps": 10.049958345446118,
+        "mean_predicted_price_usd": 265.3672417224678
+      },
+      {
+        "value": -6.771828828325277e-05,
+        "mean_predicted_change_bps": 9.588318264721801,
+        "mean_predicted_price_usd": 265.35500360241
+      },
+      {
+        "value": 0.0016244371461908423,
+        "mean_predicted_change_bps": 9.057301925683786,
+        "mean_predicted_price_usd": 265.340926311505
+      },
+      {
+        "value": 0.0029893135063481214,
+        "mean_predicted_change_bps": 8.628989234518095,
+        "mean_predicted_price_usd": 265.32957170354183
+      },
+      {
+        "value": 0.00446267738354883,
+        "mean_predicted_change_bps": 8.16663200881493,
+        "mean_predicted_price_usd": 265.3173145719062
+      },
+      {
+        "value": 0.005670531858159801,
+        "mean_predicted_change_bps": 7.787594452257402,
+        "mean_predicted_price_usd": 265.3072662521929
+      },
+      {
+        "value": 0.006978155143979967,
+        "mean_predicted_change_bps": 7.377248383609821,
+        "mean_predicted_price_usd": 265.2963879410085
+      },
+      {
+        "value": 0.0082199188495094,
+        "mean_predicted_change_bps": 6.987569750414135,
+        "mean_predicted_price_usd": 265.2860575253966
+      },
+      {
+        "value": 0.00960916883044552,
+        "mean_predicted_change_bps": 6.551608358300888,
+        "mean_predicted_price_usd": 265.2745001496834
+      },
+      {
+        "value": 0.011181415664393568,
+        "mean_predicted_change_bps": 6.058220611041913,
+        "mean_predicted_price_usd": 265.2614203961305
+      },
+      {
+        "value": 0.01257069977430685,
+        "mean_predicted_change_bps": 5.622248508893319,
+        "mean_predicted_price_usd": 265.24986273649336
+      },
+      {
+        "value": 0.014460792527266841,
+        "mean_predicted_change_bps": 5.029117338037833,
+        "mean_predicted_price_usd": 265.2341387758105
+      },
+      {
+        "value": 0.01655234454593639,
+        "mean_predicted_change_bps": 4.372766110937556,
+        "mean_predicted_price_usd": 265.2167388457509
+      },
+      {
+        "value": 0.019108317368164235,
+        "mean_predicted_change_bps": 3.5706747054503785,
+        "mean_predicted_price_usd": 265.1954753304551
+      },
+      {
+        "value": 0.02187296924750516,
+        "mean_predicted_change_bps": 2.7030975965316295,
+        "mean_predicted_price_usd": 265.17247578327186
+      },
+      {
+        "value": 0.027468088654425515,
+        "mean_predicted_change_bps": 0.9472897295866054,
+        "mean_predicted_price_usd": 265.1259291588101
+      }
+    ],
+    "close_to_mean_20": [
+      {
+        "value": -0.054210676647963196,
+        "mean_predicted_change_bps": 11.011749719741639,
+        "mean_predicted_price_usd": 265.39282406589155
+      },
+      {
+        "value": -0.040988564053143474,
+        "mean_predicted_change_bps": 10.49468333349408,
+        "mean_predicted_price_usd": 265.37911658948957
+      },
+      {
+        "value": -0.03227814922963626,
+        "mean_predicted_change_bps": 10.154052236669767,
+        "mean_predicted_price_usd": 265.37008642847803
+      },
+      {
+        "value": -0.026482044284201006,
+        "mean_predicted_change_bps": 9.927388682191944,
+        "mean_predicted_price_usd": 265.3640775572638
+      },
+      {
+        "value": -0.019495718249395333,
+        "mean_predicted_change_bps": 9.654180121150079,
+        "mean_predicted_price_usd": 265.3568347737395
+      },
+      {
+        "value": -0.014506815408765403,
+        "mean_predicted_change_bps": 9.459083161821857,
+        "mean_predicted_price_usd": 265.3516627358016
+      },
+      {
+        "value": -0.010574220022425687,
+        "mean_predicted_change_bps": 9.30529435761933,
+        "mean_predicted_price_usd": 265.34758578077117
+      },
+      {
+        "value": -0.004867241570824063,
+        "mean_predicted_change_bps": 9.082116200331633,
+        "mean_predicted_price_usd": 265.3416693077498
+      },
+      {
+        "value": -0.0009537640329278507,
+        "mean_predicted_change_bps": 8.929075022254402,
+        "mean_predicted_price_usd": 265.3376121723552
+      },
+      {
+        "value": 0.002257237252531431,
+        "mean_predicted_change_bps": 8.803505010729983,
+        "mean_predicted_price_usd": 265.33428330005654
+      },
+      {
+        "value": 0.005514527837128025,
+        "mean_predicted_change_bps": 8.676124801292392,
+        "mean_predicted_price_usd": 265.3309064392483
+      },
+      {
+        "value": 0.008947949966050795,
+        "mean_predicted_change_bps": 8.541856759031123,
+        "mean_predicted_price_usd": 265.3273469813725
+      },
+      {
+        "value": 0.011752187725435957,
+        "mean_predicted_change_bps": 8.432193717363159,
+        "mean_predicted_price_usd": 265.3244398042753
+      },
+      {
+        "value": 0.015163158563766363,
+        "mean_predicted_change_bps": 8.298803659433815,
+        "mean_predicted_price_usd": 265.32090362184323
+      },
+      {
+        "value": 0.017942806960033773,
+        "mean_predicted_change_bps": 8.190102213958308,
+        "mean_predicted_price_usd": 265.31802193674747
+      },
+      {
+        "value": 0.020627084232596765,
+        "mean_predicted_change_bps": 8.08513036932628,
+        "mean_predicted_price_usd": 265.31523912370557
+      },
+      {
+        "value": 0.023229751108231722,
+        "mean_predicted_change_bps": 7.983349996005449,
+        "mean_predicted_price_usd": 265.3125409168553
+      },
+      {
+        "value": 0.026207275407850714,
+        "mean_predicted_change_bps": 7.86691037877125,
+        "mean_predicted_price_usd": 265.30945409213035
+      },
+      {
+        "value": 0.029775433420796138,
+        "mean_predicted_change_bps": 7.727373330052062,
+        "mean_predicted_price_usd": 265.3057549524195
+      },
+      {
+        "value": 0.032960455558303146,
+        "mean_predicted_change_bps": 7.602819263903478,
+        "mean_predicted_price_usd": 265.3024530129241
+      },
+      {
+        "value": 0.03778365090659164,
+        "mean_predicted_change_bps": 7.414202492489604,
+        "mean_predicted_price_usd": 265.2974527653506
+      },
+      {
+        "value": 0.04113081141762698,
+        "mean_predicted_change_bps": 7.283307813048619,
+        "mean_predicted_price_usd": 265.29398273562657
+      },
+      {
+        "value": 0.04543712073374695,
+        "mean_predicted_change_bps": 7.1149044826290355,
+        "mean_predicted_price_usd": 265.2895183481917
+      },
+      {
+        "value": 0.05247671093813196,
+        "mean_predicted_change_bps": 6.839612963097494,
+        "mean_predicted_price_usd": 265.28222034525055
+      },
+      {
+        "value": 0.06272865133544825,
+        "mean_predicted_change_bps": 6.438698681415871,
+        "mean_predicted_price_usd": 265.2715920715868
+      }
+    ],
+    "volatility_5": [
+      {
+        "value": 0.00534567076770423,
+        "mean_predicted_change_bps": 15.678516359219193,
+        "mean_predicted_price_usd": 265.509425917728
+      },
+      {
+        "value": 0.006153488934422674,
+        "mean_predicted_change_bps": 15.129494780500226,
+        "mean_predicted_price_usd": 265.4948713062997
+      },
+      {
+        "value": 0.0066777273159364095,
+        "mean_predicted_change_bps": 14.773203976824774,
+        "mean_predicted_price_usd": 265.4854260050512
+      },
+      {
+        "value": 0.007323693648735509,
+        "mean_predicted_change_bps": 14.334182585076013,
+        "mean_predicted_price_usd": 265.47378750847236
+      },
+      {
+        "value": 0.00802522362445111,
+        "mean_predicted_change_bps": 13.857398191441176,
+        "mean_predicted_price_usd": 265.46114791131737
+      },
+      {
+        "value": 0.008666002761032873,
+        "mean_predicted_change_bps": 13.421902200300742,
+        "mean_predicted_price_usd": 265.44960287342576
+      },
+      {
+        "value": 0.009329951927287167,
+        "mean_predicted_change_bps": 12.970659043778463,
+        "mean_predicted_price_usd": 265.4376403767637
+      },
+      {
+        "value": 0.009913298310699571,
+        "mean_predicted_change_bps": 12.574196367453553,
+        "mean_predicted_price_usd": 265.42713011555827
+      },
+      {
+        "value": 0.010566456347743608,
+        "mean_predicted_change_bps": 12.13028724108714,
+        "mean_predicted_price_usd": 265.41536204469526
+      },
+      {
+        "value": 0.011261246031880673,
+        "mean_predicted_change_bps": 11.658083786178292,
+        "mean_predicted_price_usd": 265.4028438886378
+      },
+      {
+        "value": 0.011761798804269561,
+        "mean_predicted_change_bps": 11.317890553776168,
+        "mean_predicted_price_usd": 265.3938253354514
+      },
+      {
+        "value": 0.012331558529091473,
+        "mean_predicted_change_bps": 10.930661847490786,
+        "mean_predicted_price_usd": 265.3835598676223
+      },
+      {
+        "value": 0.013097349517115223,
+        "mean_predicted_change_bps": 10.410203414473033,
+        "mean_predicted_price_usd": 265.36976246775544
+      },
+      {
+        "value": 0.01376542046738547,
+        "mean_predicted_change_bps": 9.95615894886808,
+        "mean_predicted_price_usd": 265.35772570813765
+      },
+      {
+        "value": 0.014461468636587508,
+        "mean_predicted_change_bps": 9.483100183339051,
+        "mean_predicted_price_usd": 265.3451848777188
+      },
+      {
+        "value": 0.015134687598511462,
+        "mean_predicted_change_bps": 9.025556948330498,
+        "mean_predicted_price_usd": 265.33305536540934
+      },
+      {
+        "value": 0.016176644313614836,
+        "mean_predicted_change_bps": 8.317406594387956,
+        "mean_predicted_price_usd": 265.3142822358387
+      },
+      {
+        "value": 0.01732616526007106,
+        "mean_predicted_change_bps": 7.536151813553244,
+        "mean_predicted_price_usd": 265.29357110133634
+      },
+      {
+        "value": 0.018587350800247152,
+        "mean_predicted_change_bps": 6.679005855648159,
+        "mean_predicted_price_usd": 265.2708480849046
+      },
+      {
+        "value": 0.019593208042959494,
+        "mean_predicted_change_bps": 5.995389970153577,
+        "mean_predicted_price_usd": 265.25272536629893
+      },
+      {
+        "value": 0.021089440706100807,
+        "mean_predicted_change_bps": 4.978497737851208,
+        "mean_predicted_price_usd": 265.22576746176605
+      },
+      {
+        "value": 0.02285914810630553,
+        "mean_predicted_change_bps": 3.7757424758868185,
+        "mean_predicted_price_usd": 265.1938823116012
+      },
+      {
+        "value": 0.024735545665538608,
+        "mean_predicted_change_bps": 2.5004768372599764,
+        "mean_predicted_price_usd": 265.1600749048299
+      },
+      {
+        "value": 0.028309492631161854,
+        "mean_predicted_change_bps": 0.07149704184986823,
+        "mean_predicted_price_usd": 265.0956824320025
+      },
+      {
+        "value": 0.03300130809309242,
+        "mean_predicted_change_bps": -3.1172254183433106,
+        "mean_predicted_price_usd": 265.0111491128041
+      }
+    ],
+    "volatility_20": [
+      {
+        "value": 0.008151468026844775,
+        "mean_predicted_change_bps": 2.808049496173727,
+        "mean_predicted_price_usd": 265.1828836867417
+      },
+      {
+        "value": 0.008677675968656168,
+        "mean_predicted_change_bps": 3.144173204299818,
+        "mean_predicted_price_usd": 265.1917943564735
+      },
+      {
+        "value": 0.009416844693710487,
+        "mean_predicted_change_bps": 3.6163290063214135,
+        "mean_predicted_price_usd": 265.2043112492486
+      },
+      {
+        "value": 0.0098393749592623,
+        "mean_predicted_change_bps": 3.886226946599331,
+        "mean_predicted_price_usd": 265.2114662679187
+      },
+      {
+        "value": 0.010443651802400696,
+        "mean_predicted_change_bps": 4.272218409501284,
+        "mean_predicted_price_usd": 265.2216989363145
+      },
+      {
+        "value": 0.011076954429662835,
+        "mean_predicted_change_bps": 4.676750554547553,
+        "mean_predicted_price_usd": 265.2324231198614
+      },
+      {
+        "value": 0.011491102286631704,
+        "mean_predicted_change_bps": 4.9412940977667175,
+        "mean_predicted_price_usd": 265.2394361929839
+      },
+      {
+        "value": 0.011926065340033928,
+        "mean_predicted_change_bps": 5.219133679404586,
+        "mean_predicted_price_usd": 265.2468017452808
+      },
+      {
+        "value": 0.012447883725257724,
+        "mean_predicted_change_bps": 5.552453488311342,
+        "mean_predicted_price_usd": 265.2556380833921
+      },
+      {
+        "value": 0.012997143333402874,
+        "mean_predicted_change_bps": 5.903301815643893,
+        "mean_predicted_price_usd": 265.2649391041033
+      },
+      {
+        "value": 0.013586195991616975,
+        "mean_predicted_change_bps": 6.279568587823132,
+        "mean_predicted_price_usd": 265.27491397007344
+      },
+      {
+        "value": 0.014156024827180385,
+        "mean_predicted_change_bps": 6.643555836946401,
+        "mean_predicted_price_usd": 265.28456330478303
+      },
+      {
+        "value": 0.01480493266365155,
+        "mean_predicted_change_bps": 7.058056058049001,
+        "mean_predicted_price_usd": 265.29555174292267
+      },
+      {
+        "value": 0.015425584870194365,
+        "mean_predicted_change_bps": 7.454507545272249,
+        "mean_predicted_price_usd": 265.30606170750394
+      },
+      {
+        "value": 0.01590285873800246,
+        "mean_predicted_change_bps": 7.7593738338484055,
+        "mean_predicted_price_usd": 265.31414374023234
+      },
+      {
+        "value": 0.01651459106125749,
+        "mean_predicted_change_bps": 8.15012760348035,
+        "mean_predicted_price_usd": 265.32450265780784
+      },
+      {
+        "value": 0.017430534921571216,
+        "mean_predicted_change_bps": 8.735201340117955,
+        "mean_predicted_price_usd": 265.3400130151848
+      },
+      {
+        "value": 0.01829978890942481,
+        "mean_predicted_change_bps": 9.290451176703403,
+        "mean_predicted_price_usd": 265.35473273828933
+      },
+      {
+        "value": 0.018914964053151184,
+        "mean_predicted_change_bps": 9.68340410277388,
+        "mean_predicted_price_usd": 265.3651499556998
+      },
+      {
+        "value": 0.020068107936536177,
+        "mean_predicted_change_bps": 10.419993134007484,
+        "mean_predicted_price_usd": 265.3846769971632
+      },
+      {
+        "value": 0.021053731173015875,
+        "mean_predicted_change_bps": 11.049575682534542,
+        "mean_predicted_price_usd": 265.40136728714623
+      },
+      {
+        "value": 0.022119489169955757,
+        "mean_predicted_change_bps": 11.730345586278915,
+        "mean_predicted_price_usd": 265.4194145585198
+      },
+      {
+        "value": 0.02337402095139438,
+        "mean_predicted_change_bps": 12.531697753043282,
+        "mean_predicted_price_usd": 265.44065847653053
+      },
+      {
+        "value": 0.02577964195730648,
+        "mean_predicted_change_bps": 14.068326504919876,
+        "mean_predicted_price_usd": 265.48139464294
+      },
+      {
+        "value": 0.027978110048440658,
+        "mean_predicted_change_bps": 15.472633031433242,
+        "mean_predicted_price_usd": 265.51862293525454
+      }
+    ],
+    "intraday_range": [
+      {
+        "value": 0.008568584080407577,
+        "mean_predicted_change_bps": 7.527475523362164,
+        "mean_predicted_price_usd": 265.29970493299135
+      },
+      {
+        "value": 0.00976232974545555,
+        "mean_predicted_change_bps": 7.610556020352074,
+        "mean_predicted_price_usd": 265.3019074044384
+      },
+      {
+        "value": 0.010484369350964504,
+        "mean_predicted_change_bps": 7.660807435731807,
+        "mean_predicted_price_usd": 265.3032395739795
+      },
+      {
+        "value": 0.011239412314950112,
+        "mean_predicted_change_bps": 7.713355768708696,
+        "mean_predicted_price_usd": 265.3046326350127
+      },
+      {
+        "value": 0.011978482180357148,
+        "mean_predicted_change_bps": 7.764792430240624,
+        "mean_predicted_price_usd": 265.3059962255358
+      },
+      {
+        "value": 0.012479908059982676,
+        "mean_predicted_change_bps": 7.7996899067321666,
+        "mean_predicted_price_usd": 265.3069213607762
+      },
+      {
+        "value": 0.012954266036803132,
+        "mean_predicted_change_bps": 7.832703552451909,
+        "mean_predicted_price_usd": 265.3077965554932
+      },
+      {
+        "value": 0.013606114630618605,
+        "mean_predicted_change_bps": 7.878069920449724,
+        "mean_predicted_price_usd": 265.3089992219889
+      },
+      {
+        "value": 0.014235295593934954,
+        "mean_predicted_change_bps": 7.921858701141808,
+        "mean_predicted_price_usd": 265.3101600665032
+      },
+      {
+        "value": 0.014871703690533233,
+        "mean_predicted_change_bps": 7.966150464874968,
+        "mean_predicted_price_usd": 265.3113342451432
+      },
+      {
+        "value": 0.015658380754439944,
+        "mean_predicted_change_bps": 8.020900419872545,
+        "mean_predicted_price_usd": 265.3127856713741
+      },
+      {
+        "value": 0.016401020788464334,
+        "mean_predicted_change_bps": 8.072585552575305,
+        "mean_predicted_price_usd": 265.3141558488904
+      },
+      {
+        "value": 0.01711462750377062,
+        "mean_predicted_change_bps": 8.12225006847585,
+        "mean_predicted_price_usd": 265.3154724596736
+      },
+      {
+        "value": 0.01799495070515032,
+        "mean_predicted_change_bps": 8.183517465061064,
+        "mean_predicted_price_usd": 265.3170966638672
+      },
+      {
+        "value": 0.01897530138816599,
+        "mean_predicted_change_bps": 8.251746422329,
+        "mean_predicted_price_usd": 265.3189054196605
+      },
+      {
+        "value": 0.020040657629318545,
+        "mean_predicted_change_bps": 8.325891467272635,
+        "mean_predicted_price_usd": 265.3208710114702
+      },
+      {
+        "value": 0.021078439693409785,
+        "mean_predicted_change_bps": 8.398117446538036,
+        "mean_predicted_price_usd": 265.3227857286762
+      },
+      {
+        "value": 0.022081764929068718,
+        "mean_predicted_change_bps": 8.467945351812743,
+        "mean_predicted_price_usd": 265.32463687272497
+      },
+      {
+        "value": 0.02345940240637278,
+        "mean_predicted_change_bps": 8.563824071742374,
+        "mean_predicted_price_usd": 265.3271786262132
+      },
+      {
+        "value": 0.0249045255835775,
+        "mean_predicted_change_bps": 8.66439955887428,
+        "mean_predicted_price_usd": 265.32984489142234
+      },
+      {
+        "value": 0.026581679945948403,
+        "mean_predicted_change_bps": 8.78112359987758,
+        "mean_predicted_price_usd": 265.33293925624696
+      },
+      {
+        "value": 0.028838634159694076,
+        "mean_predicted_change_bps": 8.93819966997491,
+        "mean_predicted_price_usd": 265.3371033569919
+      },
+      {
+        "value": 0.03160263455909724,
+        "mean_predicted_change_bps": 9.130564370083365,
+        "mean_predicted_price_usd": 265.34220296249225
+      },
+      {
+        "value": 0.035402315204527815,
+        "mean_predicted_change_bps": 9.395008770317165,
+        "mean_predicted_price_usd": 265.34921340732524
+      },
+      {
+        "value": 0.041681682977099156,
+        "mean_predicted_change_bps": 9.832030667528981,
+        "mean_predicted_price_usd": 265.360798897124
+      }
+    ],
+    "intraday_body": [
+      {
+        "value": -0.02321848759958073,
+        "mean_predicted_change_bps": 21.934354157875216,
+        "mean_predicted_price_usd": 265.6802603352876
+      },
+      {
+        "value": -0.01736321367367482,
+        "mean_predicted_change_bps": 18.732160493097634,
+        "mean_predicted_price_usd": 265.595369893244
+      },
+      {
+        "value": -0.013914632930649415,
+        "mean_predicted_change_bps": 16.846164458150156,
+        "mean_predicted_price_usd": 265.54537196873997
+      },
+      {
+        "value": -0.011440264671235595,
+        "mean_predicted_change_bps": 15.492955972110657,
+        "mean_predicted_price_usd": 265.50949829007385
+      },
+      {
+        "value": -0.0094880995450205,
+        "mean_predicted_change_bps": 14.425335416886417,
+        "mean_predicted_price_usd": 265.48119557313805
+      },
+      {
+        "value": -0.007834967231791556,
+        "mean_predicted_change_bps": 13.521253065241046,
+        "mean_predicted_price_usd": 265.45722826868695
+      },
+      {
+        "value": -0.006199309252451922,
+        "mean_predicted_change_bps": 12.62672726073329,
+        "mean_predicted_price_usd": 265.43351430916005
+      },
+      {
+        "value": -0.00477605280226881,
+        "mean_predicted_change_bps": 11.848361833974018,
+        "mean_predicted_price_usd": 265.4128797716941
+      },
+      {
+        "value": -0.0038562598942018245,
+        "mean_predicted_change_bps": 11.345335833757682,
+        "mean_predicted_price_usd": 265.39954450718864
+      },
+      {
+        "value": -0.002603814234954747,
+        "mean_predicted_change_bps": 10.660385205269593,
+        "mean_predicted_price_usd": 265.38138640442617
+      },
+      {
+        "value": -0.001132544624559001,
+        "mean_predicted_change_bps": 9.85576183748068,
+        "mean_predicted_price_usd": 265.360055766582
+      },
+      {
+        "value": -7.01569029186606e-05,
+        "mean_predicted_change_bps": 9.274752088863693,
+        "mean_predicted_price_usd": 265.3446531458929
+      },
+      {
+        "value": 0.0008406144460026953,
+        "mean_predicted_change_bps": 8.776659893608167,
+        "mean_predicted_price_usd": 265.33144867700065
+      },
+      {
+        "value": 0.0017324957278793962,
+        "mean_predicted_change_bps": 8.288898496498568,
+        "mean_predicted_price_usd": 265.3185180784962
+      },
+      {
+        "value": 0.002630315911832104,
+        "mean_predicted_change_bps": 7.797889170283658,
+        "mean_predicted_price_usd": 265.30550137709923
+      },
+      {
+        "value": 0.0036519177374281786,
+        "mean_predicted_change_bps": 7.239184840606573,
+        "mean_predicted_price_usd": 265.2906900750723
+      },
+      {
+        "value": 0.004808484885285347,
+        "mean_predicted_change_bps": 6.606669258821032,
+        "mean_predicted_price_usd": 265.2739220301136
+      },
+      {
+        "value": 0.005926580494279424,
+        "mean_predicted_change_bps": 5.995193396027383,
+        "mean_predicted_price_usd": 265.2577117499977
+      },
+      {
+        "value": 0.007490399278266835,
+        "mean_predicted_change_bps": 5.139955764737587,
+        "mean_predicted_price_usd": 265.2350393234762
+      },
+      {
+        "value": 0.009034868153542704,
+        "mean_predicted_change_bps": 4.295300414631254,
+        "mean_predicted_price_usd": 265.2126474341805
+      },
+      {
+        "value": 0.010656089264882596,
+        "mean_predicted_change_bps": 3.4086699960325095,
+        "mean_predicted_price_usd": 265.1891427820441
+      },
+      {
+        "value": 0.012089573626865371,
+        "mean_predicted_change_bps": 2.624711021510446,
+        "mean_predicted_price_usd": 265.1683599591239
+      },
+      {
+        "value": 0.013928368977455197,
+        "mean_predicted_change_bps": 1.6190913191717187,
+        "mean_predicted_price_usd": 265.1417008903742
+      },
+      {
+        "value": 0.016901497421112188,
+        "mean_predicted_change_bps": -0.006884371688117808,
+        "mean_predicted_price_usd": 265.09859612857684
+      },
+      {
+        "value": 0.0211181464620801,
+        "mean_predicted_change_bps": -2.3129296594820348,
+        "mean_predicted_price_usd": 265.0374626606026
+      }
+    ],
+    "opening_gap": [
+      {
+        "value": -0.014317455268461288,
+        "mean_predicted_change_bps": 12.885945817610919,
+        "mean_predicted_price_usd": 265.43875810106414
+      },
+      {
+        "value": -0.010478831433721546,
+        "mean_predicted_change_bps": 11.597399020654102,
+        "mean_predicted_price_usd": 265.40459860959106
+      },
+      {
+        "value": -0.008280564907013274,
+        "mean_predicted_change_bps": 10.859486317092886,
+        "mean_predicted_price_usd": 265.38503647745523
+      },
+      {
+        "value": -0.006427140635385939,
+        "mean_predicted_change_bps": 10.237330041452156,
+        "mean_predicted_price_usd": 265.3685430586342
+      },
+      {
+        "value": -0.005201812117331728,
+        "mean_predicted_change_bps": 9.826012547179985,
+        "mean_predicted_price_usd": 265.3576389948691
+      },
+      {
+        "value": -0.004108346122520076,
+        "mean_predicted_change_bps": 9.458958580483793,
+        "mean_predicted_price_usd": 265.34790836120084
+      },
+      {
+        "value": -0.003283333901584517,
+        "mean_predicted_change_bps": 9.182019005129751,
+        "mean_predicted_price_usd": 265.3405666681515
+      },
+      {
+        "value": -0.0023170815768601416,
+        "mean_predicted_change_bps": 8.8576680419518,
+        "mean_predicted_price_usd": 265.3319680949472
+      },
+      {
+        "value": -0.0016403121360750172,
+        "mean_predicted_change_bps": 8.630490508349826,
+        "mean_predicted_price_usd": 265.3259455981
+      },
+      {
+        "value": -0.0010102752139357297,
+        "mean_predicted_change_bps": 8.419000116756882,
+        "mean_predicted_price_usd": 265.3203389687984
+      },
+      {
+        "value": -0.0002122733811005112,
+        "mean_predicted_change_bps": 8.151127371227703,
+        "mean_predicted_price_usd": 265.3132376382233
+      },
+      {
+        "value": 0.00023771099734785692,
+        "mean_predicted_change_bps": 8.000076902493882,
+        "mean_predicted_price_usd": 265.3092332767124
+      },
+      {
+        "value": 0.0007377220793863819,
+        "mean_predicted_change_bps": 7.832233501853055,
+        "mean_predicted_price_usd": 265.30478373306636
+      },
+      {
+        "value": 0.001336173566144766,
+        "mean_predicted_change_bps": 7.631345689033844,
+        "mean_predicted_price_usd": 265.29945817908157
+      },
+      {
+        "value": 0.002005405780329067,
+        "mean_predicted_change_bps": 7.406698246842893,
+        "mean_predicted_price_usd": 265.29350275518533
+      },
+      {
+        "value": 0.0026878979793174412,
+        "mean_predicted_change_bps": 7.177599701422616,
+        "mean_predicted_price_usd": 265.2874293321422
+      },
+      {
+        "value": 0.003250103395411541,
+        "mean_predicted_change_bps": 6.988878946452121,
+        "mean_predicted_price_usd": 265.2824263279553
+      },
+      {
+        "value": 0.0038945943282944484,
+        "mean_predicted_change_bps": 6.772536641765137,
+        "mean_predicted_price_usd": 265.27669107400123
+      },
+      {
+        "value": 0.004619745063751429,
+        "mean_predicted_change_bps": 6.529118506070857,
+        "mean_predicted_price_usd": 265.27023803733215
+      },
+      {
+        "value": 0.005553939297362768,
+        "mean_predicted_change_bps": 6.215528782440898,
+        "mean_predicted_price_usd": 265.26192474555586
+      },
+      {
+        "value": 0.006483300661598079,
+        "mean_predicted_change_bps": 5.9035613533161255,
+        "mean_predicted_price_usd": 265.2536544609529
+      },
+      {
+        "value": 0.007717584151876816,
+        "mean_predicted_change_bps": 5.489237859687536,
+        "mean_predicted_price_usd": 265.2426707078745
+      },
+      {
+        "value": 0.009462225452991774,
+        "mean_predicted_change_bps": 4.9035977821041925,
+        "mean_predicted_price_usd": 265.22714533674804
+      },
+      {
+        "value": 0.011434432927623514,
+        "mean_predicted_change_bps": 4.241568436750713,
+        "mean_predicted_price_usd": 265.2095948792629
+      },
+      {
+        "value": 0.015154340531041977,
+        "mean_predicted_change_bps": 2.9928722284948326,
+        "mean_predicted_price_usd": 265.17649183048013
+      }
+    ],
+    "log_volume": [
+      {
+        "value": 16.53349451276882,
+        "mean_predicted_change_bps": 5.593062333875663,
+        "mean_predicted_price_usd": 265.25694080134394
+      },
+      {
+        "value": 16.612207146815233,
+        "mean_predicted_change_bps": 6.008475962030052,
+        "mean_predicted_price_usd": 265.26795345398665
+      },
+      {
+        "value": 16.656713911497228,
+        "mean_predicted_change_bps": 6.243364767594079,
+        "mean_predicted_price_usd": 265.2741803773469
+      },
+      {
+        "value": 16.705768814918358,
+        "mean_predicted_change_bps": 6.502256820385987,
+        "mean_predicted_price_usd": 265.28104362895
+      },
+      {
+        "value": 16.74658168952973,
+        "mean_predicted_change_bps": 6.717650759657831,
+        "mean_predicted_price_usd": 265.28675374165164
+      },
+      {
+        "value": 16.79201482758166,
+        "mean_predicted_change_bps": 6.95742859132666,
+        "mean_predicted_price_usd": 265.2931102735336
+      },
+      {
+        "value": 16.825493358514144,
+        "mean_predicted_change_bps": 7.134114814172935,
+        "mean_predicted_price_usd": 265.2977942411916
+      },
+      {
+        "value": 16.865828417973628,
+        "mean_predicted_change_bps": 7.346987037226817,
+        "mean_predicted_price_usd": 265.3034375029695
+      },
+      {
+        "value": 16.896977777504425,
+        "mean_predicted_change_bps": 7.511380830092948,
+        "mean_predicted_price_usd": 265.30779559720315
+      },
+      {
+        "value": 16.934046895988207,
+        "mean_predicted_change_bps": 7.707016730077597,
+        "mean_predicted_price_usd": 265.31298192250637
+      },
+      {
+        "value": 16.961819495485994,
+        "mean_predicted_change_bps": 7.853589341455985,
+        "mean_predicted_price_usd": 265.316867575616
+      },
+      {
+        "value": 16.98996028672533,
+        "mean_predicted_change_bps": 8.002105120777703,
+        "mean_predicted_price_usd": 265.3208047422827
+      },
+      {
+        "value": 17.024659260123435,
+        "mean_predicted_change_bps": 8.1852323481557,
+        "mean_predicted_price_usd": 265.32565946155006
+      },
+      {
+        "value": 17.06119289596719,
+        "mean_predicted_change_bps": 8.378042186111006,
+        "mean_predicted_price_usd": 265.33077086769464
+      },
+      {
+        "value": 17.093608350999073,
+        "mean_predicted_change_bps": 8.549117921870659,
+        "mean_predicted_price_usd": 265.33530610083545
+      },
+      {
+        "value": 17.127457569267882,
+        "mean_predicted_change_bps": 8.727760483405877,
+        "mean_predicted_price_usd": 265.340041931208
+      },
+      {
+        "value": 17.162676723164353,
+        "mean_predicted_change_bps": 8.91363301426329,
+        "mean_predicted_price_usd": 265.3449694287175
+      },
+      {
+        "value": 17.209252320560434,
+        "mean_predicted_change_bps": 9.159440286909701,
+        "mean_predicted_price_usd": 265.3514858016222
+      },
+      {
+        "value": 17.248377805803703,
+        "mean_predicted_change_bps": 9.36592886368154,
+        "mean_predicted_price_usd": 265.356959832363
+      },
+      {
+        "value": 17.301798075158892,
+        "mean_predicted_change_bps": 9.647859562338361,
+        "mean_predicted_price_usd": 265.3644338405399
+      },
+      {
+        "value": 17.346486913224503,
+        "mean_predicted_change_bps": 9.883709278000174,
+        "mean_predicted_price_usd": 265.37068623771324
+      },
+      {
+        "value": 17.411362190696387,
+        "mean_predicted_change_bps": 10.226094902857119,
+        "mean_predicted_price_usd": 265.37976291142076
+      },
+      {
+        "value": 17.494468755196575,
+        "mean_predicted_change_bps": 10.664697928924216,
+        "mean_predicted_price_usd": 265.3913903170877
+      },
+      {
+        "value": 17.6093138353505,
+        "mean_predicted_change_bps": 11.270804076944755,
+        "mean_predicted_price_usd": 265.4074582455821
+      },
+      {
+        "value": 17.759079715522862,
+        "mean_predicted_change_bps": 12.06120816403769,
+        "mean_predicted_price_usd": 265.4284119290162
+      }
+    ],
+    "volume_to_mean_5": [
+      {
+        "value": -0.3243804639849371,
+        "mean_predicted_change_bps": 9.174206609515446,
+        "mean_predicted_price_usd": 265.34110245978485
+      },
+      {
+        "value": -0.2713221814271906,
+        "mean_predicted_change_bps": 9.008095598570218,
+        "mean_predicted_price_usd": 265.33669884194546
+      },
+      {
+        "value": -0.24049709794233265,
+        "mean_predicted_change_bps": 8.911590669776718,
+        "mean_predicted_price_usd": 265.3341404876039
+      },
+      {
+        "value": -0.21144540192097686,
+        "mean_predicted_change_bps": 8.820637733436786,
+        "mean_predicted_price_usd": 265.3317293170817
+      },
+      {
+        "value": -0.19118453109374545,
+        "mean_predicted_change_bps": 8.757206473066095,
+        "mean_predicted_price_usd": 265.3300477486646
+      },
+      {
+        "value": -0.16783935922144427,
+        "mean_predicted_change_bps": 8.68411910737201,
+        "mean_predicted_price_usd": 265.3281101960269
+      },
+      {
+        "value": -0.14207783424709033,
+        "mean_predicted_change_bps": 8.603466799180106,
+        "mean_predicted_price_usd": 265.32597209608326
+      },
+      {
+        "value": -0.12258983137756663,
+        "mean_predicted_change_bps": 8.542455177583854,
+        "mean_predicted_price_usd": 265.32435467250764
+      },
+      {
+        "value": -0.10213799541050894,
+        "mean_predicted_change_bps": 8.478426057446457,
+        "mean_predicted_price_usd": 265.3226572547743
+      },
+      {
+        "value": -0.0849606136380564,
+        "mean_predicted_change_bps": 8.424648360279031,
+        "mean_predicted_price_usd": 265.32123160318594
+      },
+      {
+        "value": -0.07083328324852085,
+        "mean_predicted_change_bps": 8.380419542084457,
+        "mean_predicted_price_usd": 265.32005909323783
+      },
+      {
+        "value": -0.05134257499755895,
+        "mean_predicted_change_bps": 8.319399450676825,
+        "mean_predicted_price_usd": 265.3184414451267
+      },
+      {
+        "value": -0.03324058137795272,
+        "mean_predicted_change_bps": 8.262727046005521,
+        "mean_predicted_price_usd": 265.316939054582
+      },
+      {
+        "value": -0.013636874488693579,
+        "mean_predicted_change_bps": 8.201353186681962,
+        "mean_predicted_price_usd": 265.3153120280517
+      },
+      {
+        "value": 0.007017680267121334,
+        "mean_predicted_change_bps": 8.136689409308884,
+        "mean_predicted_price_usd": 265.31359778549796
+      },
+      {
+        "value": 0.029460132633776934,
+        "mean_predicted_change_bps": 8.066428212168589,
+        "mean_predicted_price_usd": 265.31173515484284
+      },
+      {
+        "value": 0.053883493377486824,
+        "mean_predicted_change_bps": 7.989965331196101,
+        "mean_predicted_price_usd": 265.30970811699154
+      },
+      {
+        "value": 0.07991898929819084,
+        "mean_predicted_change_bps": 7.908455294697244,
+        "mean_predicted_price_usd": 265.3075472785933
+      },
+      {
+        "value": 0.10431115904518215,
+        "mean_predicted_change_bps": 7.832090064228082,
+        "mean_predicted_price_usd": 265.30552282946564
+      },
+      {
+        "value": 0.13287339962540104,
+        "mean_predicted_change_bps": 7.742669479374488,
+        "mean_predicted_price_usd": 265.3031522817191
+      },
+      {
+        "value": 0.16732753031844827,
+        "mean_predicted_change_bps": 7.6348029936013715,
+        "mean_predicted_price_usd": 265.3002927314803
+      },
+      {
+        "value": 0.2095556154128082,
+        "mean_predicted_change_bps": 7.502598376957952,
+        "mean_predicted_price_usd": 265.29678797520313
+      },
+      {
+        "value": 0.2607311443771084,
+        "mean_predicted_change_bps": 7.3423817539893355,
+        "mean_predicted_price_usd": 265.2925406181192
+      },
+      {
+        "value": 0.3385112106451397,
+        "mean_predicted_change_bps": 7.098873581158681,
+        "mean_predicted_price_usd": 265.2860851945575
+      },
+      {
+        "value": 0.4629641763764672,
+        "mean_predicted_change_bps": 6.709245290226669,
+        "mean_predicted_price_usd": 265.27575611352347
+      }
+    ],
+    "volume_to_mean_20": [
+      {
+        "value": -0.3688234048995265,
+        "mean_predicted_change_bps": 7.8215070681545,
+        "mean_predicted_price_usd": 265.30694122166784
+      },
+      {
+        "value": -0.32505199825275655,
+        "mean_predicted_change_bps": 7.878184905719567,
+        "mean_predicted_price_usd": 265.30844375623906
+      },
+      {
+        "value": -0.29285082621428477,
+        "mean_predicted_change_bps": 7.919880910897779,
+        "mean_predicted_price_usd": 265.3095491210862
+      },
+      {
+        "value": -0.2619845132256892,
+        "mean_predicted_change_bps": 7.959848460671032,
+        "mean_predicted_price_usd": 265.3106086644252
+      },
+      {
+        "value": -0.23903841625623612,
+        "mean_predicted_change_bps": 7.989560440623658,
+        "mean_predicted_price_usd": 265.3113963316859
+      },
+      {
+        "value": -0.21863899666667247,
+        "mean_predicted_change_bps": 8.015974830255894,
+        "mean_predicted_price_usd": 265.31209657953065
+      },
+      {
+        "value": -0.19825429984212198,
+        "mean_predicted_change_bps": 8.042370155970662,
+        "mean_predicted_price_usd": 265.31279632198925
+      },
+      {
+        "value": -0.17676239707165153,
+        "mean_predicted_change_bps": 8.07019915822364,
+        "mean_predicted_price_usd": 265.31353407134173
+      },
+      {
+        "value": -0.15817715478035874,
+        "mean_predicted_change_bps": 8.09426444249001,
+        "mean_predicted_price_usd": 265.31417204419193
+      },
+      {
+        "value": -0.140062301955587,
+        "mean_predicted_change_bps": 8.117720638316728,
+        "mean_predicted_price_usd": 265.3147938700529
+      },
+      {
+        "value": -0.11799249094198881,
+        "mean_predicted_change_bps": 8.146297950757582,
+        "mean_predicted_price_usd": 265.31555145717584
+      },
+      {
+        "value": -0.09395292925425633,
+        "mean_predicted_change_bps": 8.17742581428429,
+        "mean_predicted_price_usd": 265.3163766596374
+      },
+      {
+        "value": -0.07554567159290698,
+        "mean_predicted_change_bps": 8.201260633397315,
+        "mean_predicted_price_usd": 265.31700852283564
+      },
+      {
+        "value": -0.052889196717324914,
+        "mean_predicted_change_bps": 8.23059759332547,
+        "mean_predicted_price_usd": 265.3177862482817
+      },
+      {
+        "value": -0.025140677132595345,
+        "mean_predicted_change_bps": 8.266528037562416,
+        "mean_predicted_price_usd": 265.3187387675899
+      },
+      {
+        "value": 0.0002372580517504136,
+        "mean_predicted_change_bps": 8.299388907210096,
+        "mean_predicted_price_usd": 265.31960991219967
+      },
+      {
+        "value": 0.035305847167446,
+        "mean_predicted_change_bps": 8.344797815668883,
+        "mean_predicted_price_usd": 265.3208137064467
+      },
+      {
+        "value": 0.07386548029791797,
+        "mean_predicted_change_bps": 8.394727136898473,
+        "mean_predicted_price_usd": 265.3221373372429
+      },
+      {
+        "value": 0.10194557741127327,
+        "mean_predicted_change_bps": 8.431086927568337,
+        "mean_predicted_price_usd": 265.3231012385636
+      },
+      {
+        "value": 0.14553915304360257,
+        "mean_predicted_change_bps": 8.487534498890607,
+        "mean_predicted_price_usd": 265.32459766875604
+      },
+      {
+        "value": 0.20050884225096421,
+        "mean_predicted_change_bps": 8.558712543065411,
+        "mean_predicted_price_usd": 265.32648460510853
+      },
+      {
+        "value": 0.2534769802561415,
+        "mean_predicted_change_bps": 8.627298858927004,
+        "mean_predicted_price_usd": 265.32830283451034
+      },
+      {
+        "value": 0.3470488038392547,
+        "mean_predicted_change_bps": 8.748461257487989,
+        "mean_predicted_price_usd": 265.33151486059296
+      },
+      {
+        "value": 0.4490427101208313,
+        "mean_predicted_change_bps": 8.880529072888674,
+        "mean_predicted_price_usd": 265.3350159902568
+      },
+      {
+        "value": 0.6486665373189913,
+        "mean_predicted_change_bps": 9.139013954203072,
+        "mean_predicted_price_usd": 265.3418684477073
+      }
+    ],
+    "volume_change": [
+      {
+        "value": -0.3600053016434255,
+        "mean_predicted_change_bps": 11.321402334946162,
+        "mean_predicted_price_usd": 265.3971579315616
+      },
+      {
+        "value": -0.29305351641590716,
+        "mean_predicted_change_bps": 10.804330745536076,
+        "mean_predicted_price_usd": 265.3834503172234
+      },
+      {
+        "value": -0.25993806945102077,
+        "mean_predicted_change_bps": 10.548578688470373,
+        "mean_predicted_price_usd": 265.3766703071894
+      },
+      {
+        "value": -0.22745796804805887,
+        "mean_predicted_change_bps": 10.297733433193635,
+        "mean_predicted_price_usd": 265.3700203769122
+      },
+      {
+        "value": -0.20269556346324347,
+        "mean_predicted_change_bps": 10.106492290739029,
+        "mean_predicted_price_usd": 265.36495055702636
+      },
+      {
+        "value": -0.1735489495578614,
+        "mean_predicted_change_bps": 9.881391706389211,
+        "mean_predicted_price_usd": 265.3589831202907
+      },
+      {
+        "value": -0.14653172292279773,
+        "mean_predicted_change_bps": 9.672736473818908,
+        "mean_predicted_price_usd": 265.3534516513098
+      },
+      {
+        "value": -0.12680632687445753,
+        "mean_predicted_change_bps": 9.52039637038778,
+        "mean_predicted_price_usd": 265.3494131014672
+      },
+      {
+        "value": -0.10316319097811674,
+        "mean_predicted_change_bps": 9.337799389366062,
+        "mean_predicted_price_usd": 265.3445724390783
+      },
+      {
+        "value": -0.07934389669602167,
+        "mean_predicted_change_bps": 9.153841929363825,
+        "mean_predicted_price_usd": 265.3396957102694
+      },
+      {
+        "value": -0.059267554086628677,
+        "mean_predicted_change_bps": 8.99879145016744,
+        "mean_predicted_price_usd": 265.3355853081214
+      },
+      {
+        "value": -0.03801229668914155,
+        "mean_predicted_change_bps": 8.834636160080843,
+        "mean_predicted_price_usd": 265.3312335366179
+      },
+      {
+        "value": -0.016112874988666277,
+        "mean_predicted_change_bps": 8.665505960679194,
+        "mean_predicted_price_usd": 265.3267498798209
+      },
+      {
+        "value": 0.004531063232166593,
+        "mean_predicted_change_bps": 8.506071915548723,
+        "mean_predicted_price_usd": 265.32252326894576
+      },
+      {
+        "value": 0.027763033263556575,
+        "mean_predicted_change_bps": 8.32665038663151,
+        "mean_predicted_price_usd": 265.31776678807785
+      },
+      {
+        "value": 0.057123024399534025,
+        "mean_predicted_change_bps": 8.099901880521385,
+        "mean_predicted_price_usd": 265.31175566478817
+      },
+      {
+        "value": 0.08679806982500898,
+        "mean_predicted_change_bps": 7.870720196241811,
+        "mean_predicted_price_usd": 265.3056800377264
+      },
+      {
+        "value": 0.12153234473634184,
+        "mean_predicted_change_bps": 7.602465859566892,
+        "mean_predicted_price_usd": 265.2985685911357
+      },
+      {
+        "value": 0.16492895558895768,
+        "mean_predicted_change_bps": 7.267311920469986,
+        "mean_predicted_price_usd": 265.289683630068
+      },
+      {
+        "value": 0.20872745752021463,
+        "mean_predicted_change_bps": 6.929054158852191,
+        "mean_predicted_price_usd": 265.28071638638613
+      },
+      {
+        "value": 0.2599235924093444,
+        "mean_predicted_change_bps": 6.533664151717703,
+        "mean_predicted_price_usd": 265.27023456173754
+      },
+      {
+        "value": 0.3179685236661315,
+        "mean_predicted_change_bps": 6.085380588252542,
+        "mean_predicted_price_usd": 265.2583505241535
+      },
+      {
+        "value": 0.3831647184823712,
+        "mean_predicted_change_bps": 5.581867500997826,
+        "mean_predicted_price_usd": 265.24500234692675
+      },
+      {
+        "value": 0.48416664208532045,
+        "mean_predicted_change_bps": 4.801825191545153,
+        "mean_predicted_price_usd": 265.22432335514986
+      },
+      {
+        "value": 0.6266873875885419,
+        "mean_predicted_change_bps": 3.7011311898716714,
+        "mean_predicted_price_usd": 265.1951438581743
+      }
+    ]
+  },
+  "local_explanations": {
+    "rows": 252,
+    "max_reconstruction_error_usd": 1.1368683772161603e-13,
+    "example": {
+      "target_date": "2026-10-15",
+      "forecast_at": "2026-10-15T13:00:00+00:00",
+      "last_close": 533.6900024414062,
+      "base_price": 534.2422824059875,
+      "base_adjustment_usd": 0.5522799645812331,
+      "prediction": 535.1894722500626,
+      "actual": 539.4400024414062,
+      "reconstruction_error_usd": 0.0,
+      "contributions": [
+        {
+          "feature": "intraday_body",
+          "label": "Изменение от открытия до закрытия",
+          "value": -0.021237215828955103,
+          "contribution_usd": 0.6293613644485168,
+          "contribution_bps": 11.79263920196096
+        },
+        {
+          "feature": "return_1",
+          "label": "Изменение цены за 1 сессию",
+          "value": -0.017959351451641625,
+          "contribution_usd": 0.4845812641700879,
+          "contribution_bps": 9.079826527634644
+        },
+        {
+          "feature": "return_20",
+          "label": "Изменение цены за 20 сессий",
+          "value": 0.0884968707499929,
+          "contribution_usd": -0.18627547298072372,
+          "contribution_bps": -3.490330943592575
+        },
+        {
+          "feature": "return_2",
+          "label": "Изменение цены за 2 сессии",
+          "value": -0.013785496879046955,
+          "contribution_usd": 0.15253410411842946,
+          "contribution_bps": 2.8581030827006386
+        },
+        {
+          "feature": "volatility_20",
+          "label": "Волатильность за 20 сессий",
+          "value": 0.013469030474600237,
+          "contribution_usd": -0.09828566111770841,
+          "contribution_bps": -1.841624551108191
+        },
+        {
+          "feature": "close_to_mean_5",
+          "label": "Цена относительно средней за 5 сессий",
+          "value": -0.002810203194377636,
+          "contribution_usd": 0.07738885703749722,
+          "contribution_bps": 1.4500713276148307
+        },
+        {
+          "feature": "volatility_5",
+          "label": "Волатильность за 5 сессий",
+          "value": 0.017374710472505772,
+          "contribution_usd": -0.06793515174578828,
+          "contribution_bps": -1.272932815586083
+        },
+        {
+          "feature": "close_to_mean_20",
+          "label": "Цена относительно средней за 20 сессий",
+          "value": 0.03353683980185895,
+          "contribution_usd": -0.051589117396998514,
+          "contribution_bps": -0.9666494999156833
+        },
+        {
+          "feature": "opening_gap",
+          "label": "Разрыв цены на открытии",
+          "value": 0.003348987548693616,
+          "contribution_usd": -0.04708674513826137,
+          "contribution_bps": -0.8822864382480355
+        },
+        {
+          "feature": "volume_change",
+          "label": "Изменение объёма",
+          "value": -0.06404913634076803,
+          "contribution_usd": 0.045067304080496105,
+          "contribution_bps": 0.8444472235629716
+        },
+        {
+          "feature": "log_volume",
+          "label": "Логарифм объёма торгов",
+          "value": 16.921186374046293,
+          "contribution_usd": -0.04082312955193568,
+          "contribution_bps": -0.7649221339201991
+        },
+        {
+          "feature": "weekday",
+          "label": "День недели",
+          "value": "3",
+          "contribution_usd": 0.03493535435370748,
+          "contribution_bps": 0.6546001273003615
+        },
+        {
+          "feature": "month",
+          "label": "Месяц",
+          "value": "10",
+          "contribution_usd": -0.02937054165059747,
+          "contribution_bps": -0.5503296204957869
+        },
+        {
+          "feature": "return_lag_2",
+          "label": "Доходность с лагом 2",
+          "value": 0.011363031017658232,
+          "contribution_usd": 0.023647043896647638,
+          "contribution_bps": 0.44308575743357387
+        },
+        {
+          "feature": "return_lag_1",
+          "label": "Доходность с лагом 1",
+          "value": 0.004250185141281504,
+          "contribution_usd": 0.019822589816604685,
+          "contribution_bps": 0.37142516678080373
+        },
+        {
+          "feature": "intraday_range",
+          "label": "Диапазон последней свечи",
+          "value": 0.024752238026243666,
+          "contribution_usd": 0.016487150149075334,
+          "contribution_bps": 0.30892746863635423
+        },
+        {
+          "feature": "volume_to_mean_5",
+          "label": "Объём относительно среднего за 5 сессий",
+          "value": 0.08138887139667017,
+          "contribution_usd": -0.012980317903665519,
+          "contribution_bps": -0.2432183073373316
+        },
+        {
+          "feature": "return_5",
+          "label": "Изменение цены за 5 сессий",
+          "value": 0.00741843967709066,
+          "contribution_usd": -0.005220931736182146,
+          "contribution_bps": -0.0978270477674041
+        },
+        {
+          "feature": "return_lag_5",
+          "label": "Доходность с лагом 5",
+          "value": 0.0008691138924343811,
+          "contribution_usd": 0.00448522568012018,
+          "contribution_bps": 0.08404177817838385
+        },
+        {
+          "feature": "volume_to_mean_20",
+          "label": "Объём относительно среднего за 20 сессий",
+          "value": -0.018371430437068126,
+          "contribution_usd": -0.0015533444541744974,
+          "contribution_bps": -0.02910574391629228
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Associations in the fitted model are not causal effects.",
+    "Correlated features share information; permutations/PDP can create unusual combinations.",
+    "Permutation spread is variation across shuffles, not a confidence interval.",
+    "Test interpretation is descriptive, not a new selection/tuning step.",
+    "Ridge did not outperform the selected naive forecast."
+  ]
+}
