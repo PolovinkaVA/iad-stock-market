@@ -32,6 +32,8 @@ tmp/
 reports/*.docx
 !reports/Отчет_ИАД_MSFT_Половинка_ВА.docx
 reports/*.pptx
+!reports/Презентация_ИАД_MSFT_Половинка_ВА.pptx
+/Материалы для выступления/
 /*.pdf
 .env.*
 !.env.example
