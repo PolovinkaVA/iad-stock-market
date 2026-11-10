@@ -34,7 +34,7 @@
 ## Документация
 
 - [Отчёт по семестровой работе — DOCX, 36 страниц](reports/Отчет_ИАД_MSFT_Половинка_ВА.docx).
-- [Презентация проекта — PowerPoint, 9 слайдов](reports/Презентация_ИАД_MSFT_Половинка_ВА.pptx).
+- [Презентация проекта — PowerPoint, 12 слайдов](reports/Презентация_ИАД_MSFT_Половинка_ВА.pptx).
 - [Установка и воспроизведение сохранённого эксперимента](docs/msft_reproduction.md).
 - [Постановка задачи MSFT](docs/msft_working_spec.md).
 - [Результаты проверки Microsoft и ограничения](docs/microsoft_feasibility.md).
